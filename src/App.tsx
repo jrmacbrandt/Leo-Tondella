@@ -3,7 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { motion } from "motion/react";
 import { Check, Star, PlayCircle, Download, Clock, ThumbsUp } from "lucide-react";
 import React from 'react';
 
