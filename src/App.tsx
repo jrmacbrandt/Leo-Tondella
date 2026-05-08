@@ -38,71 +38,73 @@ export default function App() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-10 pb-32 overflow-hidden">
-        {/* Background Posters Blur */}
-        <div className="absolute inset-0 z-0">
-           <img 
-             src="/hero_bg.png" 
-             className="w-full h-full object-cover opacity-30" 
-             alt="Background Wall"
-           />
-           <div className="absolute inset-0 hero-bg-blur" />
+      <section className="relative pt-20 pb-40 overflow-hidden">
+        {/* Background Posters (Blurred) */}
+        <div className="absolute inset-0 z-0 opacity-30 blur-[2px]">
+          <img src="/hero_bg.png" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 hero-bg-blur" />
         </div>
-        
+
         <div className="container-custom relative z-10">
           <div className="grid grid-cols-12 gap-8 items-center">
-            {/* Left: Text Content (7 columns) */}
-            <div className="col-span-12 lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
-              <h1 className="text-56 font-extrabold mb-8 leading-tight">
-                Pare de criar artes do zero.<br />
-                <span className="text-gradient-primary block mt-2">
-                  Artes Gospel 100% Editáveis
-                </span>
-                para sua igreja em minutos.
+            {/* Left: Text Content (6 columns) */}
+            <div className="col-span-12 lg:col-span-6 flex flex-col items-start text-left">
+              <h1 className="font-heading font-extrabold text-[42px] leading-[1.1] mb-2 drop-shadow-2xl">
+                Pare de criar artes do zero.
               </h1>
+              <h2 className="font-heading font-extrabold text-[42px] leading-[1.1] text-brand-magenta mb-8 drop-shadow-2xl">
+                Artes Gospel 100% Editáveis<br/>
+                para sua igreja em minutos.
+              </h2>
               
-              <p className="text-18 text-text-gray mb-12 italic font-light">
-                Edite no Celular ou no PC, mesmo sem experiência.
+              <p className="text-[22px] font-medium text-white/90 mb-12 max-w-lg leading-relaxed">
+                Edite no Celular ou PC, mesmo sem experiência.
               </p>
 
-              <div className="flex flex-col items-center lg:items-start gap-2 mb-12">
-                <span className="text-text-gray/50 line-through text-18 font-semibold">DE: R$ 89,90</span>
-                <div className="flex items-baseline gap-3">
-                  <span className="text-brand-yellow font-extrabold text-[24px]">HOJE POR APENAS</span>
-                  <span className="text-brand-yellow font-extrabold text-48 drop-shadow-[0_0_15px_rgba(255,196,0,0.5)]">R$ 29,99</span>
+              <div className="flex flex-col items-start gap-1 mb-12">
+                <span className="strikethrough-magenta text-[22px] font-bold">DE: R$ 89,99</span>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-brand-yellow font-heading font-extrabold text-[36px]">HOJE POR APENAS R$</span>
+                  <span className="text-brand-yellow font-heading font-extrabold text-[72px] leading-none drop-shadow-[0_0_20px_rgba(255,196,0,0.4)]">29</span>
+                  <span className="text-brand-yellow font-heading font-extrabold text-[36px] self-start mt-2">,99</span>
                 </div>
-                <span className="text-[12px] text-text-gray uppercase tracking-widest mt-1">
-                  Acesso vitalício. Oferta por tempo limitado.
+                <span className="text-[16px] text-white/70 font-medium italic">
+                  Acesso vitalício. (Oferta por tempo limitado)
                 </span>
               </div>
 
-              <PremiumButton>GARANTIR MEU PACK</PremiumButton>
+              <PremiumButton className="px-16 py-7 min-w-[350px]">
+                GARANTIR MEU PACK
+              </PremiumButton>
             </div>
 
-            {/* Right: Mockup (5 columns) */}
-            <div className="col-span-12 lg:col-span-5 relative flex justify-center mt-20 lg:mt-0">
-               <div className="relative group">
-                 <img 
-                   src="/pack_mockup.png" 
-                   alt="Pack Gospel 3D Box"
-                   className="w-full max-w-[400px] object-contain drop-shadow-[0_0_80px_rgba(123,0,255,0.4)] transform rotate-[-3deg] hover:scale-105 transition-transform duration-500"
-                 />
-                 {/* Reflection below */}
-                 <img 
-                   src="/pack_mockup.png" 
-                   className="absolute top-full left-0 w-full reflection-bottom -translate-y-8" 
-                   alt="Reflection"
-                 />
+            {/* Right: Box Mockup (6 columns) */}
+            <div className="col-span-12 lg:col-span-6 relative flex justify-center perspective-[2000px]">
+               <div className="relative transform rotate-y-[-10deg] rotate-x-[5deg] transition-transform duration-700">
+                  <img 
+                    src="/pack_mockup.png" 
+                    alt="Pack Gospel Mockup" 
+                    className="w-full max-w-[500px] drop-shadow-[0_40px_80px_rgba(123,0,255,0.4)]"
+                  />
+                  {/* Reflection */}
+                  <img 
+                    src="/pack_mockup.png" 
+                    alt="" 
+                    className="absolute -bottom-full left-0 w-full max-w-[500px] reflection-bottom pointer-events-none"
+                  />
                </div>
             </div>
           </div>
         </div>
+
+        {/* Section Divider Bar */}
+        <div className="absolute bottom-0 left-0 w-full">
+           <div className="hero-divider" />
+        </div>
       </section>
 
-      <GlowingDivider />
-
       {/* Showcase Section */}
-      <section className="py-20">
+      <section className="py-20 bg-bg-dark">
         <div className="container-custom">
           <div className="text-center mb-20">
             <h2 className="text-[32px] md:text-[42px] font-extrabold uppercase mb-4 tracking-tighter">

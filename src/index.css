@@ -57,15 +57,9 @@ h1, h2, h3, h4, .font-heading {
 }
 
 .btn-premium {
-  background: linear-gradient(180deg, #B000FF 0%, #7B00FF 100%);
+  background: linear-gradient(180deg, #FF00D4 0%, #7B00FF 100%);
   box-shadow: inset 0 2px 10px rgba(255, 255, 255, 0.3), 0 10px 30px rgba(123, 0, 255, 0.5);
-  border-radius: 9999px;
-  font-family: var(--font-heading);
-  text-transform: uppercase;
-  font-size: 18px;
-  letter-spacing: 0.1em;
-  transition-property: transform;
-  transition-duration: 300ms;
+  @apply rounded-full font-heading uppercase text-20 tracking-wider transition-transform duration-300;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,4 +98,25 @@ h1, h2, h3, h4, .font-heading {
 
 .hero-bg-blur {
   background: linear-gradient(to bottom, rgba(5,5,5,0.2) 0%, #050505 90%);
+}
+
+.strikethrough-magenta {
+  position: relative;
+  color: #BDBDBD;
+}
+
+.strikethrough-magenta::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background: #FF00D4;
+  transform: translateY(-50%);
+}
+
+.hero-divider {
+  @apply w-full h-[2px] bg-gradient-to-r from-transparent via-brand-magenta to-transparent;
+  box-shadow: 0 0 15px rgba(255, 0, 212, 0.5);
 }
