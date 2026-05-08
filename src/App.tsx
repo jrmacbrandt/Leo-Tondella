@@ -110,7 +110,7 @@ export default function App() {
             <h2 className="font-heading font-extrabold text-[32px] md:text-[42px] uppercase mb-4 tracking-tight leading-none">
               VEJA ALGUMAS ARTES QUE <span className="text-brand-magenta">VOCÊ VAI RECEBER</span>
             </h2>
-            <p className="text-white/80 text-[20px] font-medium">
+            <p className="text-white/80 text-[24px] font-medium max-w-3xl mx-auto leading-tight">
               Modelos modernos, impactantes e totalmente personalizáveis.
             </p>
           </div>
@@ -120,7 +120,7 @@ export default function App() {
               <div key={i} className="col-span-2 md:col-span-1">
                 <div className="aspect-[3/4.5] overflow-hidden group shadow-2xl">
                   <img 
-                    src={`https://placehold.co/600x900/1A1A1A/white?text=MODELO+${i}`} 
+                    src="/showcase_item.png" 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     alt={`Modelo ${i}`}
                   />
