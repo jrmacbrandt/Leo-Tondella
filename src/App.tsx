@@ -73,7 +73,7 @@ export default function App() {
                 </span>
               </div>
 
-              <PremiumButton className="px-16 py-7 min-w-[350px]">
+              <PremiumButton className="px-20 py-5 min-w-[400px]">
                 GARANTIR MEU PACK
               </PremiumButton>
             </div>
