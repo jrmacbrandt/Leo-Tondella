@@ -32,7 +32,7 @@ export default function App() {
         <div className="absolute inset-0 z-0">
            <div 
              className="w-full h-full bg-cover bg-top opacity-50"
-             style={{ backgroundImage: "url('https://placehold.co/1920x1080/1a0b2e/1a0b2e?text=BLURRY+CHURCH+POSTERS+WALL')" }} 
+             style={{ backgroundImage: "url('/hero_bg.png')" }} 
            />
            <div className="absolute inset-0 hero-bg-overlay" />
         </div>
