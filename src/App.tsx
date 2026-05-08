@@ -49,15 +49,15 @@ export default function App() {
           <div className="grid grid-cols-12 gap-8 items-center">
             {/* Left: Text Content (6 columns) */}
             <div className="col-span-12 lg:col-span-6 flex flex-col items-start text-left">
-              <h1 className="font-heading font-extrabold text-[42px] leading-[1.1] mb-2 drop-shadow-2xl">
+              <h1 className="font-heading font-extrabold text-[36px] leading-[1.1] mb-2 drop-shadow-2xl">
                 Pare de criar artes do zero.
               </h1>
-              <h2 className="font-heading font-extrabold text-[42px] leading-[1.1] text-brand-magenta mb-8 drop-shadow-2xl">
+              <h2 className="font-heading font-extrabold text-[36px] leading-[1.1] text-brand-magenta mb-8 drop-shadow-2xl">
                 Artes Gospel 100% Editáveis<br/>
                 para sua igreja em minutos.
               </h2>
               
-              <p className="text-[22px] font-medium text-white/90 mb-12 max-w-lg leading-relaxed">
+              <p className="text-[18px] font-medium text-white/90 mb-12 max-w-lg leading-relaxed">
                 Edite no Celular ou PC, mesmo sem experiência.
               </p>
 
