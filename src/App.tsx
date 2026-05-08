@@ -28,7 +28,7 @@ export default function App() {
       <div className="py-8 flex justify-center">
         <div className="flex items-center gap-2">
           <div className="w-5 h-5 bg-gradient-to-tr from-brand-magenta to-brand-purple-deep rounded-sm" />
-          <span className="font-heading font-black tracking-[0.4em] text-[10px] uppercase">
+          <span className="font-heading font-extrabold tracking-[0.4em] text-[10px] uppercase">
             TSTUDIO PACK
           </span>
         </div>
@@ -50,7 +50,7 @@ export default function App() {
           <div className="grid grid-cols-12 gap-8 items-center">
             {/* Left: Text Content (7 columns) */}
             <div className="col-span-12 lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
-              <h1 className="text-56 font-black mb-8 leading-tight">
+              <h1 className="text-56 font-extrabold mb-8 leading-tight">
                 Pare de criar artes do zero.<br />
                 <span className="text-gradient-primary block mt-2">
                   Artes Gospel 100% Editáveis
@@ -65,8 +65,8 @@ export default function App() {
               <div className="flex flex-col items-center lg:items-start gap-2 mb-12">
                 <span className="text-text-gray/50 line-through text-18 font-semibold">DE: R$ 89,90</span>
                 <div className="flex items-baseline gap-3">
-                  <span className="text-brand-yellow font-black text-[24px]">HOJE POR APENAS</span>
-                  <span className="text-brand-yellow font-black text-48 drop-shadow-[0_0_15px_rgba(255,196,0,0.5)]">R$ 29,99</span>
+                  <span className="text-brand-yellow font-extrabold text-[24px]">HOJE POR APENAS</span>
+                  <span className="text-brand-yellow font-extrabold text-48 drop-shadow-[0_0_15px_rgba(255,196,0,0.5)]">R$ 29,99</span>
                 </div>
                 <span className="text-[12px] text-text-gray uppercase tracking-widest mt-1">
                   Acesso vitalício. Oferta por tempo limitado.
@@ -102,7 +102,7 @@ export default function App() {
       <section className="py-20">
         <div className="container-custom">
           <div className="text-center mb-20">
-            <h2 className="text-[32px] md:text-[42px] font-black uppercase mb-4 tracking-tighter">
+            <h2 className="text-[32px] md:text-[42px] font-extrabold uppercase mb-4 tracking-tighter">
               VEJA ALGUMAS ARTES QUE <span className="text-gradient-primary">VOCÊ VAI RECEBER</span>
             </h2>
             <p className="text-text-gray text-18">Artes para cultos, eventos, campanhas e muito mais prontas para editar.</p>
@@ -125,7 +125,7 @@ export default function App() {
           {/* Banner Bar */}
           <div className="bg-gradient-to-r from-brand-magenta to-brand-blue p-[2px] rounded-full max-w-4xl mx-auto shadow-[0_0_30px_rgba(255,0,212,0.3)]">
             <div className="bg-bg-dark rounded-full py-5 px-10 text-center">
-               <span className="text-white font-black text-18 uppercase tracking-[0.2em]">
+               <span className="text-white font-extrabold text-18 uppercase tracking-[0.2em]">
                  MAIS DE 100 ARTES PRONTAS PARA VOCÊ USAR
                </span>
             </div>
@@ -136,7 +136,7 @@ export default function App() {
       {/* Bonus Section */}
       <section className="py-24 relative overflow-hidden">
         <div className="container-custom text-center relative z-10">
-          <h2 className="text-[32px] md:text-[48px] font-black mb-20 uppercase leading-none">
+          <h2 className="text-[32px] md:text-[48px] font-extrabold mb-20 uppercase leading-none">
             Adquirindo o <span className="text-gradient-primary lowercase italic">Pack Gospel</span> hoje<br/>
             você leva tudo isso de bônus
           </h2>
@@ -166,7 +166,7 @@ export default function App() {
                          <Download size={24} className="text-white" />
                        </div>
                      )}
-                     <span className="text-white font-black text-[12px] uppercase tracking-widest text-center px-4">
+                     <span className="text-white font-extrabold text-[12px] uppercase tracking-widest text-center px-4">
                        {bonus.text}
                      </span>
                   </div>
@@ -176,7 +176,7 @@ export default function App() {
           </div>
 
           <div className="max-w-4xl mx-auto space-y-4 mb-16">
-            <h3 className="text-[20px] font-black text-gradient-primary uppercase tracking-[0.3em]">
+            <h3 className="text-[20px] font-extrabold text-gradient-primary uppercase tracking-[0.3em]">
               VOCÊ VAI RECEBER TUDO ISSO...
             </h3>
             <p className="text-18 text-text-gray">
@@ -220,7 +220,7 @@ export default function App() {
 
             {/* Right: Text & Comparison (7 columns) */}
             <div className="col-span-12 lg:col-span-7 space-y-12">
-              <h2 className="text-[32px] md:text-[42px] font-black leading-tight uppercase text-center lg:text-left">
+              <h2 className="text-[32px] md:text-[42px] font-extrabold leading-tight uppercase text-center lg:text-left">
                 Por que esse Pack <br/>
                 <span className="text-gradient-primary">é a escolha mais inteligente</span><br/>
                 para sua igreja?
@@ -230,7 +230,7 @@ export default function App() {
                 {/* COM O PACK */}
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <h3 className="text-[20px] font-black uppercase text-white">COM O PACK</h3>
+                    <h3 className="text-[20px] font-extrabold uppercase text-white">COM O PACK</h3>
                     <div className="bg-green-500 rounded-full p-1"><ThumbsUp size={16} className="text-black" /></div>
                   </div>
                   <div className="w-full h-[1px] bg-green-500/30" />
@@ -245,7 +245,7 @@ export default function App() {
                 {/* SEM O PACK */}
                 <div className="space-y-4 opacity-60">
                   <div className="flex items-center gap-3">
-                    <h3 className="text-[20px] font-black uppercase text-white/70 tracking-widest">SEU PRAZO</h3>
+                    <h3 className="text-[20px] font-extrabold uppercase text-white/70 tracking-widest">SEU PRAZO</h3>
                     <div className="bg-red-500 rounded-full p-1"><Clock size={16} className="text-white" /></div>
                   </div>
                   <div className="w-full h-[1px] bg-red-500/30" />
@@ -269,7 +269,7 @@ export default function App() {
       <section className="py-32 bg-bg-alt">
         <div className="container-custom">
           <div className="text-center mb-24">
-            <h2 className="text-[32px] md:text-[42px] font-black uppercase leading-tight tracking-tighter">
+            <h2 className="text-[32px] md:text-[42px] font-extrabold uppercase leading-tight tracking-tighter">
               AINDA ESTÁ EM DÚVIDA? VEJA O QUE<br/>
               OS MEMBROS FALAM DO PACK GOSPEL.
             </h2>
@@ -330,14 +330,14 @@ export default function App() {
       {/* Offer Section */}
       <section className="py-32 relative overflow-hidden">
         <div className="container-custom text-center">
-          <h2 className="text-[32px] md:text-[42px] font-black uppercase mb-16 leading-tight tracking-tighter">
+          <h2 className="text-[32px] md:text-[42px] font-extrabold uppercase mb-16 leading-tight tracking-tighter">
             CHEGA DE SÓ OLHAR. <span className="text-gradient-primary">COMECE AGORA</span><br />
             A CRIAR ARTES PROFISSIONAIS.
           </h2>
 
           <div className="max-w-[400px] mx-auto offer-card-border p-12 text-center shadow-[0_0_100px_rgba(123,0,255,0.25)]">
              <div className="inline-block border border-white/20 rounded-full px-6 py-2 mb-10">
-               <span className="text-white font-black uppercase tracking-[0.3em] text-[12px]">
+               <span className="text-white font-extrabold uppercase tracking-[0.3em] text-[12px]">
                  Pack Gospel
                </span>
              </div>
@@ -361,7 +361,7 @@ export default function App() {
 
              <div className="mb-10 pt-10 border-t border-white/10">
                <span className="text-text-gray font-bold text-18 block mb-2">Tudo isso hoje por apenas:</span>
-               <div className="text-48 font-black text-brand-yellow drop-shadow-[0_0_15px_rgba(255,196,0,0.4)]">
+               <div className="text-48 font-extrabold text-brand-yellow drop-shadow-[0_0_15px_rgba(255,196,0,0.4)]">
                  R$ 29,99
                </div>
                <span className="text-text-gray/50 text-[12px] uppercase font-bold tracking-widest mt-2 block">ou 6x de R$ 5,63 no cartão</span>
@@ -381,14 +381,14 @@ export default function App() {
            <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-16">
              <div className="shrink-0 flex items-center justify-center">
                 <div className="w-40 h-40 bg-bg-dark rounded-full flex flex-col items-center justify-center jagged-seal border-[4px] border-brand-magenta shadow-[0_0_50px_rgba(255,0,212,0.5)]">
-                  <div className="text-56 font-black text-brand-blue leading-none">7</div>
-                  <div className="text-[12px] font-black text-white uppercase tracking-[0.3em] mt-1">DIAS</div>
-                  <div className="text-[10px] font-black text-brand-magenta uppercase tracking-[0.2em]">GARANTIA</div>
+                  <div className="text-56 font-extrabold text-brand-blue leading-none">7</div>
+                  <div className="text-[12px] font-extrabold text-white uppercase tracking-[0.3em] mt-1">DIAS</div>
+                  <div className="text-[10px] font-extrabold text-brand-magenta uppercase tracking-[0.2em]">GARANTIA</div>
                 </div>
              </div>
              
              <div className="text-center md:text-left max-w-lg">
-               <h3 className="text-[32px] font-black mb-4 uppercase leading-tight text-white drop-shadow-lg">
+               <h3 className="text-[32px] font-extrabold mb-4 uppercase leading-tight text-white drop-shadow-lg">
                  SE VOCÊ NÃO GOSTAR,<br/>DEVOLVEMOS SEU DINHEIRO.
                </h3>
                <p className="text-text-gray text-18 font-medium leading-relaxed drop-shadow-sm">
@@ -403,7 +403,7 @@ export default function App() {
       <section className="py-32 bg-bg-dark">
         <div className="container-custom">
            <div className="text-center mb-24">
-             <span className="text-white font-black text-[12px] uppercase tracking-[0.5em] opacity-80">
+             <span className="text-white font-extrabold text-[12px] uppercase tracking-[0.5em] opacity-80">
                CRIADO POR QUEM ENTENDE DE DESIGN PARA O REINO
              </span>
            </div>
@@ -423,16 +423,16 @@ export default function App() {
               {/* Bio (7 columns) */}
               <div className="col-span-12 md:col-span-7 space-y-8 text-text-gray text-18 leading-relaxed font-medium">
                 <p>
-                  Olá, eu sou o <span className="text-gradient-primary font-black uppercase">Leonardo Tondella</span>, designer à frente da Tondella Studio.
+                  Olá, eu sou o <span className="text-gradient-primary font-extrabold uppercase">Leonardo Tondella</span>, designer à frente da Tondella Studio.
                 </p>
                 <p>
                   <span className="text-white font-bold">Desenvolvi este pack</span> após notar que centenas de líderes e ministérios perdem horas valiosas tentando criar artes que, no fim, não passam a mensagem que deveriam.
                 </p>
                 <p>
-                  Reuni toda a minha experiência para criar designs <span className="text-brand-magenta font-black">profissionais, elegantes</span> e extremamente fáceis de editar.
+                  Reuni toda a minha experiência para criar designs <span className="text-brand-magenta font-extrabold">profissionais, elegantes</span> e extremamente fáceis de editar.
                 </p>
                 <p>
-                  Meu foco está no que realmente importa: <span className="text-gradient-primary font-black uppercase underline underline-offset-8">a mensagem.</span> Deixe o design profissional com quem já é referência no mercado.
+                  Meu foco está no que realmente importa: <span className="text-gradient-primary font-extrabold uppercase underline underline-offset-8">a mensagem.</span> Deixe o design profissional com quem já é referência no mercado.
                 </p>
               </div>
            </div>
@@ -441,7 +441,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="py-12 bg-bg-dark text-center border-t border-white/5">
-         <p className="text-white/20 text-[10px] font-black uppercase tracking-[0.5em]">
+         <p className="text-white/20 text-[10px] font-extrabold uppercase tracking-[0.5em]">
            © 2026 TONDIELLA STUDIO. TODOS OS DIREITOS RESERVADOS.
          </p>
       </footer>
