@@ -104,34 +104,36 @@ export default function App() {
       </section>
 
       {/* Showcase Section */}
-      <section className="py-20 bg-bg-dark">
+      <section className="py-24 bg-bg-dark">
         <div className="container-custom">
-          <div className="text-center mb-20">
-            <h2 className="text-[32px] md:text-[42px] font-extrabold uppercase mb-4 tracking-tighter">
-              VEJA ALGUMAS ARTES QUE <span className="text-gradient-primary">VOCÊ VAI RECEBER</span>
+          <div className="text-center mb-16">
+            <h2 className="font-heading font-extrabold text-[32px] md:text-[42px] uppercase mb-4 tracking-tight leading-none">
+              VEJA ALGUMAS ARTES QUE <span className="text-brand-magenta">VOCÊ VAI RECEBER</span>
             </h2>
-            <p className="text-text-gray text-18">Artes para cultos, eventos, campanhas e muito mais prontas para editar.</p>
+            <p className="text-white/80 text-[20px] font-medium">
+              Modelos modernos, impactantes e totalmente personalizáveis.
+            </p>
           </div>
 
-          <div className="grid grid-cols-12 gap-6 mb-16">
+          <div className="grid grid-cols-4 gap-4 mb-16">
             {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="col-span-6 md:col-span-3">
-                <div className="aspect-[3/4.5] rounded-2xl overflow-hidden border border-white/5 hover:border-brand-magenta/30 transition-all group">
+              <div key={i} className="col-span-2 md:col-span-1">
+                <div className="aspect-[3/4.5] overflow-hidden group shadow-2xl">
                   <img 
-                    src={`https://placehold.co/400x600/0B0B0B/white?text=ARTE+${i}`} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    alt={`Arte ${i}`}
+                    src={`https://placehold.co/600x900/1A1A1A/white?text=MODELO+${i}`} 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    alt={`Modelo ${i}`}
                   />
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Banner Bar */}
-          <div className="bg-gradient-to-r from-brand-magenta to-brand-blue p-[2px] rounded-full max-w-4xl mx-auto shadow-[0_0_30px_rgba(255,0,212,0.3)]">
-            <div className="bg-bg-dark rounded-full py-5 px-10 text-center">
-               <span className="text-white font-extrabold text-18 uppercase tracking-[0.2em]">
-                 MAIS DE 100 ARTES PRONTAS PARA VOCÊ USAR
+          {/* Banner Ideal */}
+          <div className="bg-gradient-to-r from-brand-magenta to-brand-blue rounded-full max-w-5xl mx-auto shadow-[0_10px_40px_rgba(123,0,255,0.3)]">
+            <div className="py-4 px-10 text-center">
+               <span className="text-white font-extrabold text-[16px] md:text-[18px] uppercase tracking-normal">
+                 IDEAL PARA IGREJAS, LÍDERES E MÍDIAS QUE PRECISAM POSTAR TODA SEMANA.
                </span>
             </div>
           </div>
