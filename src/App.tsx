@@ -25,12 +25,15 @@ export default function App() {
     <div className="min-h-screen bg-bg-dark text-white font-sans selection:bg-brand-purple-deep/30">
       
       {/* Header Logo */}
-      <div className="py-8 flex justify-center">
+      <div className="py-10 flex justify-center">
         <div className="flex items-center gap-2">
-          <div className="w-5 h-5 bg-gradient-to-tr from-brand-magenta to-brand-purple-deep rounded-sm" />
-          <span className="font-heading font-extrabold tracking-[0.4em] text-[10px] uppercase">
-            TSTUDIO PACK
+          <span className="font-heading font-extrabold text-[32px] tracking-tighter text-gradient-primary leading-none">
+            TSTUDIO
           </span>
+          <div className="flex flex-col leading-[0.9] border-l border-white/20 pl-2">
+            <span className="font-sans font-bold text-[14px] text-white uppercase tracking-tight">Pack</span>
+            <span className="font-sans font-bold text-[14px] text-white uppercase tracking-tight">Gospel</span>
+          </div>
         </div>
       </div>
 
