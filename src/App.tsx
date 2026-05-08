@@ -57,13 +57,13 @@ export default function App() {
                 para sua igreja em minutos.
               </h2>
               
-              <p className="text-[20px] font-medium text-white/90 mb-10 max-w-lg leading-relaxed">
+              <p className="text-[22px] font-medium text-white/90 mb-10 max-w-lg leading-relaxed">
                 Edite no Celular ou PC, mesmo sem experiência.
               </p>
 
               <div className="flex flex-col items-start gap-0 mb-12">
                 <span className="strikethrough-magenta text-[20px] font-bold">DE: R$ 89,99</span>
-                <div className="flex items-baseline gap-1 whitespace-nowrap -mt-2">
+                <div className="flex items-baseline gap-1 whitespace-nowrap -mt-4">
                   <span className="text-brand-yellow font-heading font-extrabold text-[24px]">HOJE POR APENAS R$</span>
                   <span className="text-brand-yellow font-heading font-extrabold text-[56px] leading-none drop-shadow-[0_0_20px_rgba(255,196,0,0.4)]">29</span>
                   <span className="text-brand-yellow font-heading font-extrabold text-[24px] self-start mt-1">,99</span>
