@@ -1,75 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-heading: "Montserrat", ui-sans-serif, system-ui, sans-serif;
-  --color-brand-purple: #8B5CF6;
-  --color-brand-pink: #D946EF;
-  --color-brand-blue: #3B82F6;
-  --color-brand-cyan: #06b6d4;
-  --color-brand-yellow: #FACC15;
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-magenta: #e600ff;
+  --color-brand-purple: #7a00ff;
+  --color-brand-cyan: #00d2ff;
+  --color-brand-yellow: #ffcc00;
+  --color-bg-dark: #000000;
 }
 
 body {
-  @apply bg-[#05000a] text-white antialiased selection:bg-purple-500/30;
+  @apply bg-[#000000] text-white antialiased;
   overflow-x: hidden;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  @apply font-heading tracking-tight;
+  font-family: "Montserrat", sans-serif;
 }
 
 @layer utilities {
-  .text-gradient-pink-purple {
-    @apply bg-gradient-to-r from-[#D946EF] to-[#8B5CF6] bg-clip-text text-transparent;
+  .text-glow-magenta {
+    text-shadow: 0 0 20px rgba(230, 0, 255, 0.6);
   }
 
-  .text-gradient-purple-cyan {
-    @apply bg-gradient-to-r from-[#8B5CF6] to-[#06b6d4] bg-clip-text text-transparent;
-  }
-
-  .bg-gradient-pink-purple {
-    @apply bg-gradient-to-r from-[#D946EF] via-[#8B5CF6] to-[#3B82F6];
+  .text-gradient-magenta {
+    @apply bg-gradient-to-r from-[#e600ff] to-[#7a00ff] bg-clip-text text-transparent;
   }
 
   .glowing-divider {
-    @apply w-full h-[2px] bg-gradient-to-r from-[#D946EF] via-[#8B5CF6] to-[#06b6d4] shadow-[0_0_20px_rgba(217,70,239,0.8),_0_0_40px_rgba(139,92,246,0.6)];
+    @apply w-full h-[3px] bg-gradient-to-r from-[#e600ff] via-[#7a00ff] to-[#00d2ff];
+    box-shadow: 0 0 15px rgba(230, 0, 255, 0.8), 0 0 30px rgba(0, 210, 255, 0.5);
   }
 
-  .btn-premium {
-    @apply bg-gradient-to-b from-[#b580ff] to-[#6d28d9] text-white font-heading font-black tracking-widest uppercase rounded-full shadow-[0_0_30px_rgba(139,92,246,0.5)] transition-all hover:shadow-[0_0_50px_rgba(139,92,246,0.8)] hover:scale-105 active:scale-95 border border-white/20;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  .glowing-divider-purple {
+    @apply w-full h-[2px] bg-gradient-to-r from-transparent via-[#7a00ff] to-transparent;
+    box-shadow: 0 0 20px rgba(122, 0, 255, 0.8);
   }
 
-  .glass-card {
-    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl;
+  .btn-glossy {
+    background: linear-gradient(to bottom, #9d00ff, #5500ff);
+    box-shadow: 
+      inset 0 2px 4px rgba(255, 255, 255, 0.4),
+      0 0 20px rgba(122, 0, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-glossy:hover {
+    box-shadow: 
+      inset 0 2px 4px rgba(255, 255, 255, 0.5),
+      0 0 30px rgba(122, 0, 255, 0.9);
+    transform: scale(1.02);
   }
 
-  .glowing-border-card {
+  .card-border-glow {
     position: relative;
     border-radius: 1.5rem;
-    background: #0a0514;
+    background: #000;
     z-index: 1;
   }
 
-  .glowing-border-card::before {
+  .card-border-glow::before {
     content: "";
     position: absolute;
     inset: -2px;
     border-radius: inherit;
-    background: linear-gradient(135deg, #D946EF, #3B82F6, #8B5CF6);
-    z-index: -1;
-    filter: blur(8px);
-    opacity: 0.7;
-  }
-  
-  .glowing-border-card::after {
-    content: "";
-    position: absolute;
-    inset: -2px;
-    border-radius: inherit;
-    background: linear-gradient(135deg, #D946EF, #3B82F6, #8B5CF6);
+    background: linear-gradient(to bottom, #00d2ff, #7a00ff, #e600ff);
     z-index: -1;
   }
+
+  .bg-radial-purple {
+    background: radial-gradient(circle at center, rgba(122,0,255,0.2) 0%, rgba(0,0,0,0) 70%);
+  }
+
+  .bg-radial-magenta {
+    background: radial-gradient(circle at center, rgba(230,0,255,0.15) 0%, rgba(0,0,0,0) 70%);
+  }
+
+  .jagged-seal {
+    clip-path: polygon(50% 0%, 61% 4%, 72% 1%, 81% 9%, 91% 10%, 95% 20%, 100% 29%, 98% 40%, 100% 50%, 98% 60%, 100% 71%, 95% 80%, 91% 90%, 81% 91%, 72% 99%, 61% 96%, 50% 100%, 39% 96%, 28% 99%, 19% 91%, 9% 90%, 5% 80%, 0% 71%, 2% 60%, 0% 50%, 2% 40%, 0% 29%, 5% 20%, 9% 10%, 19% 9%, 28% 1%, 39% 4%);
+  }
+}
+
+/* Background overlay for hero */
+.hero-bg-overlay {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, #000000 90%, #000000 100%);
 }
