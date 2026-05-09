@@ -321,8 +321,8 @@ export default function App() {
 
             {/* Right: Text & Comparison (7 columns) */}
             <div className="col-span-12 lg:col-span-7 space-y-12">
-              <h2 className="text-[32px] md:text-[42px] font-extrabold leading-tight uppercase text-center lg:text-left">
-                Por que esse Pack <br/>
+              <h2 className="text-[26px] md:text-[42px] font-extrabold leading-tight uppercase text-center lg:text-left">
+                Por que esse Pack <br className="md:block" />
                 <span className="text-gradient-primary">é a escolha mais inteligente</span><br/>
                 para sua igreja?
               </h2>
@@ -335,11 +335,11 @@ export default function App() {
                     <div className="bg-green-500 rounded-full p-1"><ThumbsUp size={16} className="text-black" /></div>
                   </div>
                   <div className="w-full h-[1px] bg-green-500/30" />
-                  <ul className="space-y-3 text-text-gray text-18 font-medium">
-                    <li className="flex items-center gap-3"><span className="text-green-500">•</span> Artes modernas e impactantes por <span className="text-brand-yellow font-bold">apenas R$ 29,99</span>.</li>
-                    <li className="flex items-center gap-3"><span className="text-green-500">•</span> <span className="text-brand-yellow font-bold">Sem depender de designers</span> ou perder horas criando do zero.</li>
-                    <li className="flex items-center gap-3"><span className="text-green-500">•</span> Sem gastar centenas de reais por mês.</li>
-                    <li className="flex items-center gap-3"><span className="text-green-500">•</span> Você investe uma única vez e tem <span className="text-brand-yellow font-bold">acesso vitalício</span>.</li>
+                  <ul className="space-y-4 text-text-gray text-[16px] md:text-18 font-medium">
+                    <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span>Artes modernas e impactantes por <span className="text-brand-yellow font-bold">apenas R$ 29,99</span>.</span></li>
+                    <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span><span className="text-brand-yellow font-bold">Sem depender de designers</span> ou perder horas criando do zero.</span></li>
+                    <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span>Sem gastar centenas de reais por mês.</span></li>
+                    <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span>Você investe uma única vez e tem <span className="text-brand-yellow font-bold">acesso vitalício</span>.</span></li>
                   </ul>
                 </div>
 
@@ -350,16 +350,16 @@ export default function App() {
                     <div className="bg-red-500 rounded-full p-1"><Clock size={16} className="text-white" /></div>
                   </div>
                   <div className="w-full h-[1px] bg-red-500/30" />
-                  <p className="text-text-gray text-18 leading-relaxed">
+                  <p className="text-text-gray text-[16px] md:text-18 leading-relaxed">
                     Criar artes do zero consome tempo, energia e criatividade. Muitas vezes o resultado não fica profissional, impactando negativamente a imagem da sua igreja. Contratar um designer pode custar entre <span className="text-white font-bold">R$ 50 e R$ 150</span> por arte.
                   </p>
                 </div>
               </div>
 
-              <div className="flex justify-center lg:justify-start pt-8 relative">
+              <div className="flex justify-center lg:justify-start pt-8 relative w-full">
                  {/* Radial magenta glow behind button */}
                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-magenta/10 blur-[80px] -z-10" />
-                 <PremiumButton>GARANTIR MEU PACK</PremiumButton>
+                 <PremiumButton className="w-full md:w-auto">GARANTIR MEU PACK</PremiumButton>
               </div>
             </div>
           </div>
@@ -370,8 +370,8 @@ export default function App() {
       <section className="py-32 bg-bg-alt">
         <div className="container-custom">
           <div className="text-center mb-24">
-            <h2 className="text-[32px] md:text-[42px] font-extrabold uppercase leading-tight tracking-tighter">
-              AINDA ESTÁ EM DÚVIDA? VEJA O QUE<br/>
+            <h2 className="text-[24px] md:text-[42px] font-extrabold uppercase leading-tight tracking-tighter">
+              AINDA ESTÁ EM DÚVIDA? VEJA O QUE<br className="hidden md:block" />
               OS MEMBROS FALAM DO PACK GOSPEL.
             </h2>
           </div>
@@ -431,7 +431,7 @@ export default function App() {
       {/* Offer Section */}
       <section className="py-32 relative overflow-hidden">
         <div className="container-custom text-center">
-          <h2 className="text-[32px] md:text-[42px] font-extrabold uppercase mb-16 leading-tight tracking-tighter">
+          <h2 className="text-[26px] md:text-[42px] font-extrabold uppercase mb-16 leading-tight tracking-tighter">
             CHEGA DE SÓ OLHAR. <span className="text-gradient-primary">COMECE AGORA</span><br />
             A CRIAR ARTES PROFISSIONAIS.
           </h2>
