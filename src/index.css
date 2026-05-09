@@ -29,7 +29,16 @@ h1, h2, h3, h4, .font-heading {
 .container-custom {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .text-56 { font-size: 56px; line-height: 1.1; }

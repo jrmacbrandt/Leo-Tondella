@@ -21,6 +21,26 @@ const GlowingDivider = () => (
 // --- Main Application ---
 
 export default function App() {
+  const [activeIndex, setActiveIndex] = React.useState(0);
+  const carouselRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % 4);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
+  React.useEffect(() => {
+    if (carouselRef.current) {
+      const scrollAmount = carouselRef.current.offsetWidth * activeIndex;
+      carouselRef.current.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  }, [activeIndex]);
+
   return (
     <div className="min-h-screen bg-bg-dark text-white font-sans selection:bg-brand-purple-deep/30">
       
@@ -48,32 +68,32 @@ export default function App() {
         <div className="container-custom relative z-10">
           <div className="grid grid-cols-12 gap-8 items-center">
             {/* Left: Text Content (6 columns) */}
-            <div className="col-span-12 lg:col-span-6 flex flex-col items-start text-left">
-              <h1 className="font-heading font-extrabold text-[36px] leading-[1.1] mb-2 drop-shadow-2xl">
+            <div className="col-span-12 lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left">
+              <h1 className="font-heading font-extrabold text-[28px] md:text-[42px] lg:text-[48px] leading-[1.1] mb-2 drop-shadow-2xl">
                 Pare de criar artes do zero.
               </h1>
-              <h2 className="font-heading font-extrabold text-[36px] leading-[1.1] text-brand-magenta mb-8 drop-shadow-2xl">
+              <h2 className="font-heading font-extrabold text-[28px] md:text-[42px] lg:text-[48px] leading-[1.1] text-brand-magenta mb-8 drop-shadow-2xl">
                 Artes Gospel 100% Editáveis<br/>
                 para sua igreja em minutos.
               </h2>
               
-              <p className="text-[22px] font-medium text-white/90 mb-10 max-w-lg leading-relaxed">
+              <p className="text-[18px] md:text-[22px] font-medium text-white/90 mb-10 max-w-lg leading-relaxed">
                 Edite no Celular ou PC, mesmo sem experiência.
               </p>
 
-              <div className="flex flex-col items-start gap-0 mb-12">
-                <span className="strikethrough-magenta text-[20px] font-bold">DE: R$ 89,99</span>
-                <div className="flex items-baseline gap-1 whitespace-nowrap -mt-4">
-                  <span className="text-brand-yellow font-heading font-extrabold text-[24px]">HOJE POR APENAS R$</span>
-                  <span className="text-brand-yellow font-heading font-extrabold text-[56px] leading-none drop-shadow-[0_0_20px_rgba(255,196,0,0.4)]">29</span>
-                  <span className="text-brand-yellow font-heading font-extrabold text-[24px] self-start mt-1">,99</span>
+              <div className="flex flex-col items-center lg:items-start gap-0 mb-12">
+                <span className="strikethrough-magenta text-[18px] md:text-[20px] font-bold">DE: R$ 89,99</span>
+                <div className="flex items-baseline gap-1 whitespace-nowrap -mt-2 md:-mt-4">
+                  <span className="text-brand-yellow font-heading font-extrabold text-[20px] md:text-[24px]">HOJE POR APENAS R$</span>
+                  <span className="text-brand-yellow font-heading font-extrabold text-[44px] md:text-[56px] leading-none drop-shadow-[0_0_20px_rgba(255,196,0,0.4)]">29</span>
+                  <span className="text-brand-yellow font-heading font-extrabold text-[20px] md:text-[24px] self-start mt-1">,99</span>
                 </div>
-                <span className="text-[18px] text-white/70 font-medium italic -mt-1">
+                <span className="text-[14px] md:text-[18px] text-white/70 font-medium italic -mt-1">
                   Acesso vitalício. (Oferta por tempo limitado)
                 </span>
               </div>
 
-              <PremiumButton className="px-20 py-5 min-w-[400px]">
+              <PremiumButton className="px-12 md:px-20 py-5 w-full md:w-auto">
                 GARANTIR MEU PACK
               </PremiumButton>
             </div>
@@ -115,10 +135,11 @@ export default function App() {
             </p>
           </div>
 
-          <div className="grid grid-cols-4 gap-4 mb-16">
+          {/* Grid Desktop / Static Layout */}
+          <div className="hidden md:grid grid-cols-4 gap-4 mb-16">
             {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="col-span-2 md:col-span-1">
-                <div className="aspect-[3/4.5] overflow-hidden group shadow-2xl">
+              <div key={i} className="col-span-1">
+                <div className="aspect-[3/4.5] overflow-hidden group shadow-2xl rounded-xl">
                   <img 
                     src={`/showcase_${i}.png`} 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -127,6 +148,35 @@ export default function App() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Carousel Mobile Only */}
+          <div className="md:hidden mb-16 px-4 overflow-hidden">
+            <div 
+              ref={carouselRef}
+              className="flex overflow-x-hidden snap-x snap-mandatory scrollbar-hide pb-4"
+            >
+              {[1, 2, 3, 4].map((i, index) => (
+                <div key={i} className="min-w-full snap-center px-2">
+                  <div className="aspect-[3/4.5] overflow-hidden shadow-2xl rounded-2xl border border-white/5">
+                    <img 
+                      src={`/showcase_${i}.png`} 
+                      className="w-full h-full object-cover"
+                      alt={`Modelo ${i}`}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+            {/* Carousel Indicators */}
+            <div className="flex justify-center gap-3 mt-4">
+              {[0, 1, 2, 3].map((i) => (
+                <div 
+                  key={i} 
+                  className={`h-1.5 transition-all duration-500 rounded-full ${activeIndex === i ? 'w-8 bg-brand-magenta' : 'w-2 bg-white/20'}`} 
+                />
+              ))}
+            </div>
           </div>
 
           {/* Banner Ideal */}
@@ -143,9 +193,9 @@ export default function App() {
       {/* Bonus Section */}
       <section className="py-24 relative overflow-hidden">
         <div className="container-custom text-center relative z-10">
-          <h2 className="text-[32px] md:text-[48px] font-extrabold mb-20 uppercase leading-none">
-            Adquirindo o <span className="text-gradient-primary lowercase italic">Pack Gospel</span> hoje<br/>
-            você leva tudo isso de bônus
+          <h2 className="text-[24px] md:text-[48px] font-extrabold mb-20 uppercase leading-tight text-white px-4">
+            ADQUIRINDO O <span className="text-gradient-primary italic">PACK GOSPEL</span> HOJE<br/>
+            VOCÊ LEVA TUDO ISSO DE BÔNUS
           </h2>
 
           <div className="grid grid-cols-10 gap-4 mb-20">
