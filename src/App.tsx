@@ -22,13 +22,21 @@ const GlowingDivider = () => (
 
 export default function App() {
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const [bonusActiveIndex, setBonusActiveIndex] = React.useState(0);
   const carouselRef = React.useRef<HTMLDivElement>(null);
+  const bonusCarouselRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
     const timer = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % 4);
     }, 3000);
-    return () => clearInterval(timer);
+    const bonusTimer = setInterval(() => {
+      setBonusActiveIndex((prev) => (prev + 1) % 5);
+    }, 3500); // Slightly different timing for variety
+    return () => {
+      clearInterval(timer);
+      clearInterval(bonusTimer);
+    };
   }, []);
 
   React.useEffect(() => {
@@ -41,8 +49,18 @@ export default function App() {
     }
   }, [activeIndex]);
 
+  React.useEffect(() => {
+    if (bonusCarouselRef.current) {
+      const scrollAmount = bonusCarouselRef.current.offsetWidth * bonusActiveIndex;
+      bonusCarouselRef.current.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  }, [bonusActiveIndex]);
+
   return (
-    <div className="min-h-screen bg-bg-dark text-white font-sans selection:bg-brand-purple-deep/30">
+    <div className="min-h-screen bg-bg-dark text-white font-sans selection:bg-brand-purple-deep/30 overflow-x-hidden">
       
       {/* Header Logo */}
       <div className="py-10 flex justify-center">
@@ -198,7 +216,8 @@ export default function App() {
             VOCÊ LEVA TUDO ISSO DE BÔNUS
           </h2>
 
-          <div className="grid grid-cols-10 gap-4 mb-20">
+          {/* Grid Desktop */}
+          <div className="hidden md:grid grid-cols-10 gap-4 mb-20">
             {[
               { text: "CURSO PC: PASSO A PASSO", color: "#405CFF" },
               { text: "CURSO MOBILE: PASSO A PASSO", color: "#405CFF" },
@@ -206,7 +225,7 @@ export default function App() {
               { text: "MEU PROCESSO CRIATIVO", color: "#405CFF" },
               { text: "CENTRAL DE DOWNLOADS", color: "#FF00D4", icon: true },
             ].map((bonus, i) => (
-              <div key={i} className="col-span-5 md:col-span-2">
+              <div key={i} className="col-span-2">
                 <div 
                   className="aspect-[9/16] rounded-[2rem] overflow-hidden border border-white/10 relative group"
                   style={{ boxShadow: `0 0 20px ${bonus.color}30` }}
@@ -220,6 +239,36 @@ export default function App() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Carousel Mobile Only */}
+          <div className="md:hidden mb-20 px-4 overflow-hidden">
+            <div 
+              ref={bonusCarouselRef}
+              className="flex overflow-x-hidden snap-x snap-mandatory scrollbar-hide pb-4"
+            >
+              {[1, 2, 3, 4, 5].map((i, index) => (
+                <div key={i} className="min-w-full snap-center px-4">
+                  <div className="aspect-[9/16] rounded-[2.5rem] overflow-hidden border border-white/10 relative shadow-2xl">
+                    <img 
+                      src={`/bonus_${i}.png`} 
+                      className="w-full h-full object-cover opacity-90"
+                      alt={`Bônus ${i}`}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80" />
+                  </div>
+                </div>
+              ))}
+            </div>
+            {/* Carousel Indicators */}
+            <div className="flex justify-center gap-3 mt-6">
+              {[0, 1, 2, 3, 4].map((i) => (
+                <div 
+                  key={i} 
+                  className={`h-1.5 transition-all duration-500 rounded-full ${bonusActiveIndex === i ? 'w-8 bg-brand-magenta' : 'w-2 bg-white/20'}`} 
+                />
+              ))}
+            </div>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-2 mb-16 px-4">
