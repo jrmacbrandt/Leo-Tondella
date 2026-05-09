@@ -223,26 +223,28 @@ export default function App() {
                          <Download size={24} className="text-white" />
                        </div>
                      )}
-                     <span className="text-white font-extrabold text-[12px] uppercase tracking-widest text-center px-4">
-                       {bonus.text}
-                     </span>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-6 mb-16 px-4">
-            <h3 className="text-[16px] md:text-[24px] font-extrabold text-gradient-primary uppercase tracking-[0.3em]">
-              VOCÊ VAI RECEBER TUDO ISSO...
-            </h3>
-            <p className="text-[18px] md:text-[24px] text-text-gray leading-relaxed">
-              Videoaulas passo a passo ensinando a editar pelo celular e computador.
+          <div className="max-w-4xl mx-auto space-y-2 mb-16 px-4">
+            <p className="text-[20px] md:text-[28px] font-medium text-white leading-tight">
+              <span className="text-brand-magenta">Videoaulas completas</span> para você
             </p>
-            <p className="text-[18px] md:text-[26px] font-bold text-white pt-2 leading-tight">
-              Mais de <span className="text-brand-magenta">R$ 200 EM BÔNUS DE PRESENTE</span>. Só o conhecimento dessas aulas<br className="hidden md:block" />
-              vale muito mais que o seu investimento.
+            <p className="text-[20px] md:text-[28px] font-medium text-white leading-tight">
+              mesmo não sabendo nada de design possa criar suas artes.
             </p>
+            
+            <div className="pt-6 space-y-2">
+              <p className="text-[18px] md:text-[24px] font-medium text-white leading-tight">
+                Mais de <span className="text-brand-magenta font-bold">R$ 200 EM BÔNUS DE PRESENTE</span>. Só o conhecimento dessas aulas
+              </p>
+              <p className="text-[18px] md:text-[24px] font-medium text-brand-magenta leading-tight">
+                vale muito mais do que o seu investimento hoje.
+              </p>
+            </div>
           </div>
 
           <div className="flex justify-center">
