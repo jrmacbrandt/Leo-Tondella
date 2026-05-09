@@ -200,11 +200,11 @@ export default function App() {
 
           <div className="grid grid-cols-10 gap-4 mb-20">
             {[
-              { text: "BÔNUS 1", color: "#405CFF" },
-              { text: "BÔNUS 2", color: "#405CFF" },
-              { text: "BÔNUS 3", color: "#FF00D4" },
-              { text: "PROCESSO CRIATIVO", color: "#405CFF" },
-              { text: "DOWNLOADS", color: "#FF00D4", icon: true },
+              { text: "CURSO PC: PASSO A PASSO", color: "#405CFF" },
+              { text: "CURSO MOBILE: PASSO A PASSO", color: "#405CFF" },
+              { text: "DO ZERO À ARTE PRONTA", color: "#FF00D4" },
+              { text: "MEU PROCESSO CRIATIVO", color: "#405CFF" },
+              { text: "CENTRAL DE DOWNLOADS", color: "#FF00D4", icon: true },
             ].map((bonus, i) => (
               <div key={i} className="col-span-5 md:col-span-2">
                 <div 
@@ -212,7 +212,7 @@ export default function App() {
                   style={{ boxShadow: `0 0 20px ${bonus.color}30` }}
                 >
                   <img 
-                    src={`https://placehold.co/400x700/0B0B0B/white?text=${bonus.text.replace(' ', '+')}`} 
+                    src={`/bonus_${i + 1}.png`} 
                     alt={bonus.text} 
                     className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500" 
                   />
