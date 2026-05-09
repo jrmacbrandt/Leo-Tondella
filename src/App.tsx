@@ -120,7 +120,7 @@ export default function App() {
               <div key={i} className="col-span-2 md:col-span-1">
                 <div className="aspect-[3/4.5] overflow-hidden group shadow-2xl">
                   <img 
-                    src="/showcase_item.png" 
+                    src={`/showcase_${i}.png`} 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     alt={`Modelo ${i}`}
                   />
