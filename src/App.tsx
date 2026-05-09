@@ -232,14 +232,14 @@ export default function App() {
             ))}
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-4 mb-16">
-            <h3 className="text-[20px] font-extrabold text-gradient-primary uppercase tracking-[0.3em]">
+          <div className="max-w-4xl mx-auto space-y-6 mb-16 px-4">
+            <h3 className="text-[16px] md:text-[24px] font-extrabold text-gradient-primary uppercase tracking-[0.3em]">
               VOCÊ VAI RECEBER TUDO ISSO...
             </h3>
-            <p className="text-18 text-text-gray">
+            <p className="text-[18px] md:text-[24px] text-text-gray leading-relaxed">
               Videoaulas passo a passo ensinando a editar pelo celular e computador.
             </p>
-            <p className="text-18 font-bold text-white pt-2">
+            <p className="text-[18px] md:text-[26px] font-bold text-white pt-2 leading-tight">
               Mais de <span className="text-brand-magenta">R$ 200 EM BÔNUS DE PRESENTE</span>. Só o conhecimento dessas aulas<br className="hidden md:block" />
               vale muito mais que o seu investimento.
             </p>
