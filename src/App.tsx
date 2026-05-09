@@ -217,13 +217,6 @@ export default function App() {
                     className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500" 
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-end pb-8">
-                     {bonus.icon && (
-                       <div className="mb-4 w-14 h-14 rounded-full border border-white/20 flex items-center justify-center bg-white/5">
-                         <Download size={24} className="text-white" />
-                       </div>
-                     )}
-                  </div>
                 </div>
               </div>
             ))}
