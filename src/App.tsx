@@ -99,14 +99,14 @@ export default function App() {
                 Edite no Celular ou PC, mesmo sem experiência.
               </p>
 
-              <div className="flex flex-col items-center lg:items-start gap-0 mb-12">
+              <div className="flex flex-col items-center lg:items-start gap-0 mb-12 w-full">
                 <span className="strikethrough-magenta text-[18px] md:text-[20px] font-bold">DE: R$ 89,99</span>
-                <div className="flex items-baseline gap-1 whitespace-nowrap -mt-2 md:-mt-4">
-                  <span className="text-brand-yellow font-heading font-extrabold text-[20px] md:text-[24px]">HOJE POR APENAS R$</span>
+                <div className="flex items-baseline justify-center lg:justify-start gap-1 whitespace-nowrap -mt-2 md:-mt-4 w-full">
+                  <span className="text-brand-yellow font-heading font-extrabold text-[16px] md:text-[24px]">HOJE POR APENAS R$</span>
                   <span className="text-brand-yellow font-heading font-extrabold text-[44px] md:text-[56px] leading-none drop-shadow-[0_0_20px_rgba(255,196,0,0.4)]">29</span>
                   <span className="text-brand-yellow font-heading font-extrabold text-[20px] md:text-[24px] self-start mt-1">,99</span>
                 </div>
-                <span className="text-[14px] md:text-[18px] text-white/70 font-medium italic -mt-1">
+                <span className="text-[14px] md:text-[18px] text-white/70 font-medium italic -mt-1 text-center lg:text-left w-full">
                   Acesso vitalício. (Oferta por tempo limitado)
                 </span>
               </div>
@@ -198,9 +198,9 @@ export default function App() {
           </div>
 
           {/* Banner Ideal */}
-          <div className="bg-gradient-to-r from-brand-magenta to-brand-blue rounded-full max-w-5xl mx-auto shadow-[0_10px_40px_rgba(123,0,255,0.3)]">
-            <div className="py-4 px-10 text-center">
-               <span className="text-white font-extrabold text-[16px] md:text-[18px] uppercase tracking-normal">
+          <div className="bg-gradient-to-r from-brand-magenta to-brand-blue rounded-2xl md:rounded-full max-w-5xl mx-auto shadow-[0_10px_40px_rgba(123,0,255,0.3)]">
+            <div className="py-4 px-6 md:px-10 text-center">
+               <span className="text-white font-extrabold text-[14px] md:text-[18px] uppercase tracking-normal">
                  IDEAL PARA IGREJAS, LÍDERES E MÍDIAS QUE PRECISAM POSTAR TODA SEMANA.
                </span>
             </div>
@@ -319,7 +319,7 @@ export default function App() {
                 para sua igreja?
               </h2>
               
-              <div className="space-y-8 md:space-y-12">
+              <div className="space-y-8 md:space-y-12 w-full">
                 {/* COM O PACK */}
                 <div className="space-y-4">
                   <div className="flex items-center justify-center lg:justify-start gap-3">
@@ -327,7 +327,7 @@ export default function App() {
                     <div className="bg-green-500 rounded-full p-1"><ThumbsUp size={16} className="text-black" /></div>
                   </div>
                   <div className="w-full h-[1px] bg-green-500/30" />
-                  <ul className="space-y-4 text-text-gray text-[16px] md:text-[20px] font-medium text-left lg:text-left">
+                  <ul className="space-y-4 text-text-gray text-[16px] md:text-[20px] font-medium text-left max-w-xs md:max-w-none mx-auto lg:mx-0">
                     <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span>Artes modernas e impactantes por <span className="text-brand-yellow font-bold">apenas R$ 29,99</span>.</span></li>
                     <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span><span className="text-brand-yellow font-bold">Sem depender de designers</span> ou perder horas criando do zero.</span></li>
                     <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span>Sem gastar centenas de reais por mês.</span></li>
@@ -342,7 +342,7 @@ export default function App() {
                     <div className="bg-red-500 rounded-full p-1"><Clock size={16} className="text-white" /></div>
                   </div>
                   <div className="w-full h-[1px] bg-red-500/30" />
-                  <p className="text-text-gray text-[16px] md:text-[20px] leading-relaxed text-center lg:text-left">
+                  <p className="text-text-gray text-[16px] md:text-[20px] leading-relaxed text-center lg:text-left max-w-md mx-auto lg:mx-0">
                     Criar artes do zero consome tempo, energia e criatividade. Muitas vezes o resultado não fica profissional, impactando negativamente a imagem da sua igreja. Contratar um designer pode custar entre <span className="text-white font-bold">R$ 50 e R$ 150</span> por arte.
                   </p>
                 </div>
