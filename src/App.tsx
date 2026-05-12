@@ -86,31 +86,29 @@ export default function App() {
         <div className="container-custom relative z-10">
           <div className="grid grid-cols-12 gap-8 items-center">
             {/* Left: Text Content (6 columns) */}
-            <div className="col-span-12 lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left">
-              <h1 className="font-heading font-extrabold text-[28px] md:text-[42px] lg:text-[48px] leading-[1.1] mb-2 drop-shadow-2xl">
+            <div className="col-span-12 lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left px-2 sm:px-0">
+              <h1 className="font-heading font-extrabold text-[22px] sm:text-[28px] md:text-[42px] lg:text-[48px] leading-[1.1] mb-2 drop-shadow-2xl w-full">
                 Pare de criar artes do zero.
               </h1>
-              <h2 className="font-heading font-extrabold text-[28px] md:text-[42px] lg:text-[48px] leading-[1.1] text-brand-magenta mb-8 drop-shadow-2xl">
+              <h2 className="font-heading font-extrabold text-[22px] sm:text-[28px] md:text-[42px] lg:text-[48px] leading-[1.1] text-brand-magenta mb-8 drop-shadow-2xl w-full">
                 Artes Gospel 100% Editáveis<br/>
                 para sua igreja em minutos.
               </h2>
               
-              <p className="text-[18px] md:text-[22px] font-medium text-white/90 mb-10 max-w-lg leading-relaxed mx-auto lg:mx-0">
+              <p className="text-[15px] sm:text-[17px] md:text-[22px] font-medium text-white/90 mb-10 leading-relaxed w-full">
                 Edite no Celular ou PC, mesmo sem experiência.
               </p>
 
-              <div className="mb-12 w-full text-center lg:text-left flex flex-col items-center lg:items-start">
-                <span className="strikethrough-magenta text-[18px] md:text-[20px] font-bold opacity-70 mb-2">DE: R$ 89,99</span>
-                
-                <div className="text-brand-yellow flex flex-col items-center lg:items-start leading-tight">
-                  <span className="font-heading font-extrabold text-[14px] md:text-[22px] tracking-widest uppercase">HOJE POR APENAS</span>
+              <div className="mb-12 w-full flex flex-col items-center lg:items-start">
+                <span className="strikethrough-magenta text-[15px] md:text-[20px] font-bold opacity-70 mb-1">DE: R$ 89,99</span>
+                <div className="text-brand-yellow flex flex-col items-center lg:items-start leading-none">
+                  <span className="font-heading font-extrabold text-[12px] sm:text-[13px] md:text-[22px] tracking-widest uppercase">HOJE POR APENAS</span>
                   <div className="flex items-baseline gap-1">
-                    <span className="font-heading font-extrabold text-[20px] md:text-[24px]">R$</span>
-                    <span className="font-heading font-extrabold text-[48px] md:text-[64px] drop-shadow-[0_0_20px_rgba(255,196,0,0.4)]">29,99</span>
+                    <span className="font-heading font-extrabold text-[18px] md:text-[24px]">R$</span>
+                    <span className="font-heading font-extrabold text-[40px] sm:text-[48px] md:text-[64px] drop-shadow-[0_0_20px_rgba(255,196,0,0.4)]">29,99</span>
                   </div>
                 </div>
-
-                <span className="text-[14px] md:text-[18px] text-white/70 font-medium italic mt-2">
+                <span className="text-[12px] sm:text-[14px] md:text-[18px] text-white/70 font-medium italic mt-2">
                   Acesso vitalício. (Oferta por tempo limitado)
                 </span>
               </div>
