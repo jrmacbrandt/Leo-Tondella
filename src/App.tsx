@@ -99,14 +99,14 @@ export default function App() {
                 Edite no Celular ou PC, mesmo sem experiência.
               </p>
 
-              <div className="flex flex-col items-center lg:items-start gap-0 mb-12 w-full">
-                <span className="strikethrough-magenta text-[18px] md:text-[20px] font-bold">DE: R$ 89,99</span>
-                <div className="flex items-baseline justify-center lg:justify-start gap-1 whitespace-nowrap -mt-2 md:-mt-4 w-full">
-                  <span className="text-brand-yellow font-heading font-extrabold text-[16px] md:text-[24px]">HOJE POR APENAS R$</span>
+              <div className="flex flex-col items-center lg:items-start gap-0 mb-12 w-full text-center lg:text-left">
+                <span className="strikethrough-magenta text-[18px] md:text-[20px] font-bold block mb-2">DE: R$ 89,99</span>
+                <div className="flex items-baseline justify-center lg:justify-start gap-1 whitespace-nowrap">
+                  <span className="text-brand-yellow font-heading font-extrabold text-[14px] md:text-[24px]">HOJE POR APENAS R$</span>
                   <span className="text-brand-yellow font-heading font-extrabold text-[44px] md:text-[56px] leading-none drop-shadow-[0_0_20px_rgba(255,196,0,0.4)]">29</span>
                   <span className="text-brand-yellow font-heading font-extrabold text-[20px] md:text-[24px] self-start mt-1">,99</span>
                 </div>
-                <span className="text-[14px] md:text-[18px] text-white/70 font-medium italic -mt-1 text-center lg:text-left w-full">
+                <span className="text-[14px] md:text-[18px] text-white/70 font-medium italic mt-2 block">
                   Acesso vitalício. (Oferta por tempo limitado)
                 </span>
               </div>
@@ -327,12 +327,14 @@ export default function App() {
                     <div className="bg-green-500 rounded-full p-1"><ThumbsUp size={16} className="text-black" /></div>
                   </div>
                   <div className="w-full h-[1px] bg-green-500/30" />
-                  <ul className="space-y-4 text-text-gray text-[16px] md:text-[20px] font-medium text-left max-w-xs md:max-w-none mx-auto lg:mx-0">
-                    <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span>Artes modernas e impactantes por <span className="text-brand-yellow font-bold">apenas R$ 29,99</span>.</span></li>
-                    <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span><span className="text-brand-yellow font-bold">Sem depender de designers</span> ou perder horas criando do zero.</span></li>
-                    <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span>Sem gastar centenas de reais por mês.</span></li>
-                    <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span>Você investe uma única vez e tem <span className="text-brand-yellow font-bold">acesso vitalício</span>.</span></li>
-                  </ul>
+                  <div className="flex justify-center lg:justify-start">
+                    <ul className="space-y-4 text-text-gray text-[16px] md:text-[20px] font-medium text-left max-w-[280px] md:max-w-none">
+                      <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span>Artes modernas e impactantes por <span className="text-brand-yellow font-bold">apenas R$ 29,99</span>.</span></li>
+                      <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span><span className="text-brand-yellow font-bold">Sem depender de designers</span> ou perder horas criando do zero.</span></li>
+                      <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span>Sem gastar centenas de reais por mês.</span></li>
+                      <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span>Você investe uma única vez e tem <span className="text-brand-yellow font-bold">acesso vitalício</span>.</span></li>
+                    </ul>
+                  </div>
                 </div>
 
                 {/* SEM O PACK */}
