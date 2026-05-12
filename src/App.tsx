@@ -323,11 +323,11 @@ export default function App() {
                 {/* COM O PACK */}
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <h3 className="text-[18px] md:text-[20px] font-extrabold uppercase text-white">COM O PACK</h3>
+                    <h3 className="text-[20px] md:text-[24px] font-extrabold uppercase text-white">COM O PACK</h3>
                     <div className="bg-green-500 rounded-full p-1"><ThumbsUp size={16} className="text-black" /></div>
                   </div>
                   <div className="w-full h-[1px] bg-green-500/30" />
-                  <ul className="space-y-4 text-text-gray text-[14px] md:text-[18px] font-medium">
+                  <ul className="space-y-4 text-text-gray text-[16px] md:text-[20px] font-medium">
                     <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span>Artes modernas e impactantes por <span className="text-brand-yellow font-bold">apenas R$ 29,99</span>.</span></li>
                     <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span><span className="text-brand-yellow font-bold">Sem depender de designers</span> ou perder horas criando do zero.</span></li>
                     <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span>Sem gastar centenas de reais por mês.</span></li>
@@ -338,11 +338,11 @@ export default function App() {
                 {/* SEM O PACK */}
                 <div className="space-y-4 opacity-60">
                   <div className="flex items-center gap-3">
-                    <h3 className="text-[18px] md:text-[20px] font-extrabold uppercase text-white/70 tracking-widest">SEU PRAZO</h3>
+                    <h3 className="text-[20px] md:text-[24px] font-extrabold uppercase text-white/70 tracking-widest">SEU PRAZO</h3>
                     <div className="bg-red-500 rounded-full p-1"><Clock size={16} className="text-white" /></div>
                   </div>
                   <div className="w-full h-[1px] bg-red-500/30" />
-                  <p className="text-text-gray text-[14px] md:text-[18px] leading-relaxed">
+                  <p className="text-text-gray text-[16px] md:text-[20px] leading-relaxed">
                     Criar artes do zero consome tempo, energia e criatividade. Muitas vezes o resultado não fica profissional, impactando negativamente a imagem da sua igreja. Contratar um designer pode custar entre <span className="text-white font-bold">R$ 50 e R$ 150</span> por arte.
                   </p>
                 </div>
