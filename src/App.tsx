@@ -271,22 +271,13 @@ export default function App() {
             </div>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-2 mb-16 px-4">
-            <p className="text-[20px] md:text-[28px] font-medium text-white leading-tight">
-              <span className="text-brand-magenta">Videoaulas completas</span> para você
-            </p>
-            <p className="text-[20px] md:text-[28px] font-medium text-white leading-tight">
-              mesmo não sabendo nada de design possa criar suas artes.
-            </p>
-            
-            <div className="pt-6 space-y-2">
-              <p className="text-[18px] md:text-[24px] font-medium text-white leading-tight">
-                Mais de <span className="text-brand-magenta font-bold">R$ 200 EM BÔNUS DE PRESENTE</span>. Só o conhecimento dessas aulas
-              </p>
-              <p className="text-[18px] md:text-[24px] font-medium text-brand-magenta leading-tight">
-                vale muito mais do que o seu investimento hoje.
-              </p>
-            </div>
+          <div className="max-w-5xl mx-auto mb-20 px-4">
+            <h3 className="text-[22px] md:text-[38px] font-medium text-white leading-[1.2] tracking-tight">
+              <span className="text-brand-magenta">Videoaulas completas</span> para você mesmo não sabendo<br className="hidden md:block" />
+              nada de design possa criar suas artes.<br className="hidden md:block" />
+              Mais de <span className="text-brand-magenta font-bold">R$ 200 EM BÔNUS DE PRESENTE</span>. Só o conhecimento<br className="hidden md:block" />
+              <span className="text-brand-magenta">dessas aulas vale muito mais do que o seu investimento hoje.</span>
+            </h3>
           </div>
 
           <div className="flex justify-center">
