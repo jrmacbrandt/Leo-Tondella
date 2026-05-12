@@ -76,7 +76,7 @@ export default function App() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-12 pb-24 md:pt-16 md:pb-32 overflow-hidden">
+      <section className="relative pt-12 pb-20 md:pt-16 md:pb-28 lg:pt-20 lg:pb-36 overflow-hidden">
         {/* Background Posters (Blurred) */}
         <div className="absolute inset-0 z-0 opacity-30 blur-[2px]">
           <img src="/hero_bg.png" alt="" className="w-full h-full object-cover" />
@@ -84,53 +84,61 @@ export default function App() {
         </div>
 
         <div className="container-custom relative z-10">
-          <div className="grid grid-cols-12 gap-4 md:gap-8 items-center">
-            {/* Left: Text Content (6 columns) */}
+          <div className="grid grid-cols-12 gap-4 lg:gap-6 items-center">
+            {/* Left: Text Content */}
             <div className="col-span-12 lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left px-2 sm:px-0">
-              <h1 className="font-heading font-extrabold text-[22px] sm:text-[28px] md:text-[42px] lg:text-[48px] leading-[1.1] mb-2 drop-shadow-2xl w-full break-words">
+              <h1 className="font-heading font-extrabold text-[22px] sm:text-[28px] lg:text-[38px] xl:text-[44px] leading-[1.1] mb-1 drop-shadow-2xl w-full break-words">
                 Pare de criar artes do zero.
               </h1>
-              <h2 className="font-heading font-extrabold text-[22px] sm:text-[28px] md:text-[42px] lg:text-[48px] leading-[1.1] text-brand-magenta mb-8 drop-shadow-2xl w-full break-words">
+              <h2 className="font-heading font-extrabold text-[22px] sm:text-[28px] lg:text-[38px] xl:text-[44px] leading-[1.1] text-brand-magenta mb-6 lg:mb-8 drop-shadow-2xl w-full break-words">
                 Artes Gospel 100% Editáveis<br/>
                 para sua igreja em minutos.
               </h2>
               
-              <p className="text-[15px] sm:text-[17px] md:text-[22px] font-medium text-white/90 mb-10 leading-relaxed w-full">
+              <p className="text-[15px] sm:text-[17px] lg:text-[20px] font-medium text-white/90 mb-8 leading-relaxed w-full">
                 Edite no Celular ou PC, mesmo sem experiência.
               </p>
 
-              <div className="mb-12 w-full flex flex-col items-center lg:items-start">
-                <span className="strikethrough-magenta text-[15px] md:text-[20px] font-bold opacity-70 mb-1">DE: R$ 89,99</span>
-                <div className="text-brand-yellow flex flex-col items-center lg:items-start leading-none">
-                  <span className="font-heading font-extrabold text-[12px] sm:text-[13px] md:text-[22px] tracking-widest uppercase">HOJE POR APENAS</span>
+              <div className="mb-8 w-full flex flex-col items-center lg:items-start">
+                <span className="strikethrough-magenta text-[15px] lg:text-[18px] font-bold opacity-70 mb-2">DE: R$ 89,99</span>
+                
+                {/* Mobile: stacked. Desktop: single line */}
+                <div className="hidden lg:flex items-baseline gap-2 text-brand-yellow">
+                  <span className="font-heading font-extrabold text-[20px] xl:text-[24px]">HOJE POR APENAS R$</span>
+                  <span className="font-heading font-extrabold text-[52px] xl:text-[64px] leading-none drop-shadow-[0_0_20px_rgba(255,196,0,0.4)]">29</span>
+                  <span className="font-heading font-extrabold text-[24px] xl:text-[28px] self-start mt-2">,99</span>
+                </div>
+                <div className="lg:hidden flex flex-col items-center text-brand-yellow leading-none">
+                  <span className="font-heading font-extrabold text-[12px] sm:text-[13px] tracking-widest uppercase">HOJE POR APENAS</span>
                   <div className="flex items-baseline gap-1">
-                    <span className="font-heading font-extrabold text-[18px] md:text-[24px]">R$</span>
-                    <span className="font-heading font-extrabold text-[40px] sm:text-[48px] md:text-[64px] drop-shadow-[0_0_20px_rgba(255,196,0,0.4)]">29,99</span>
+                    <span className="font-heading font-extrabold text-[18px]">R$</span>
+                    <span className="font-heading font-extrabold text-[40px] sm:text-[48px] drop-shadow-[0_0_20px_rgba(255,196,0,0.4)]">29,99</span>
                   </div>
                 </div>
-                <span className="text-[12px] sm:text-[14px] md:text-[18px] text-white/70 font-medium italic mt-2">
+
+                <span className="text-[12px] sm:text-[14px] lg:text-[16px] text-white/70 font-medium italic mt-2">
                   Acesso vitalício. (Oferta por tempo limitado)
                 </span>
               </div>
 
-              <PremiumButton className="px-12 md:px-20 py-5 w-full md:w-auto">
+              <PremiumButton className="py-5 w-full">
                 GARANTIR MEU PACK
               </PremiumButton>
             </div>
 
-            {/* Right: Box Mockup (6 columns) */}
-            <div className="col-span-12 lg:col-span-6 relative flex justify-center perspective-[2000px]">
-               <div className="relative transform rotate-y-[-10deg] rotate-x-[5deg] transition-transform duration-700">
+            {/* Right: Box Mockup */}
+            <div className="col-span-12 lg:col-span-6 relative flex justify-center lg:justify-end perspective-[2000px]">
+               <div className="relative transform lg:rotate-y-[-8deg] lg:rotate-x-[3deg] transition-transform duration-700 lg:-mt-12">
                   <img 
                     src="/pack_mockup.png" 
                     alt="Pack Gospel Mockup" 
-                    className="w-full max-w-[500px] drop-shadow-[0_40px_80px_rgba(123,0,255,0.4)]"
+                    className="w-full max-w-[300px] sm:max-w-[380px] lg:max-w-none lg:w-[115%] drop-shadow-[0_40px_80px_rgba(123,0,255,0.5)]"
                   />
                   {/* Reflection */}
                   <img 
                     src="/pack_mockup.png" 
                     alt="" 
-                    className="absolute -bottom-full left-0 w-full max-w-[500px] reflection-bottom pointer-events-none"
+                    className="absolute -bottom-full left-0 w-full reflection-bottom pointer-events-none"
                   />
                </div>
             </div>
@@ -142,6 +150,7 @@ export default function App() {
            <div className="hero-divider" />
         </div>
       </section>
+
 
       {/* Showcase Section */}
       <section className="py-12 md:py-20 bg-bg-dark">
