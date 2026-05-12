@@ -84,55 +84,52 @@ export default function App() {
         </div>
 
         <div className="container-custom relative z-10">
-          <div className="grid grid-cols-12 gap-4 lg:gap-6 items-center">
+          <div className="grid grid-cols-12 gap-8 items-center">
             {/* Left: Text Content */}
-            <div className="col-span-12 lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left px-2 sm:px-0">
-              <h1 className="font-heading font-extrabold text-[22px] sm:text-[28px] lg:text-[38px] xl:text-[44px] leading-[1.1] mb-1 drop-shadow-2xl w-full break-words">
+            <div className="col-span-12 lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left px-2 sm:px-0">
+              <h1 className="font-heading font-extrabold text-[24px] sm:text-[32px] lg:text-[42px] xl:text-[48px] leading-[1.1] mb-2 drop-shadow-2xl w-full break-words text-white">
                 Pare de criar artes do zero.
               </h1>
-              <h2 className="font-heading font-extrabold text-[22px] sm:text-[28px] lg:text-[38px] xl:text-[44px] leading-[1.1] text-brand-magenta mb-6 lg:mb-8 drop-shadow-2xl w-full break-words">
-                Artes Gospel 100% Editáveis<br/>
+              <h2 className="font-heading font-extrabold text-[24px] sm:text-[32px] lg:text-[42px] xl:text-[48px] leading-[1.1] text-brand-magenta mb-8 drop-shadow-2xl w-full break-words">
+                Artes Gospel 100% Editáveis<br className="hidden sm:block"/>
                 para sua igreja em minutos.
               </h2>
               
-              <p className="text-[15px] sm:text-[17px] lg:text-[20px] font-medium text-white/90 mb-8 leading-relaxed w-full">
+              <p className="text-[16px] sm:text-[18px] lg:text-[22px] font-medium text-white mb-10 leading-relaxed w-full">
                 Edite no Celular ou PC, mesmo sem experiência.
               </p>
 
-              <div className="mb-8 w-full flex flex-col items-center lg:items-start">
-                <span className="strikethrough-magenta text-[15px] lg:text-[18px] font-bold opacity-70 mb-2">DE: R$ 89,99</span>
+              <div className="mb-10 w-full flex flex-col items-center lg:items-start">
+                <span className="strikethrough-magenta text-[16px] lg:text-[20px] font-bold opacity-70 mb-2">DE: R$ 89,99</span>
                 
-                {/* Mobile: stacked. Desktop: single line */}
-                <div className="hidden lg:flex items-baseline gap-2 text-brand-yellow">
-                  <span className="font-heading font-extrabold text-[20px] xl:text-[24px]">HOJE POR APENAS R$</span>
-                  <span className="font-heading font-extrabold text-[52px] xl:text-[64px] leading-none drop-shadow-[0_0_20px_rgba(255,196,0,0.4)]">29</span>
-                  <span className="font-heading font-extrabold text-[24px] xl:text-[28px] self-start mt-2">,99</span>
-                </div>
-                <div className="lg:hidden flex flex-col items-center text-brand-yellow leading-none">
-                  <span className="font-heading font-extrabold text-[12px] sm:text-[13px] tracking-widest uppercase">HOJE POR APENAS</span>
-                  <div className="flex items-baseline gap-1">
-                    <span className="font-heading font-extrabold text-[18px]">R$</span>
-                    <span className="font-heading font-extrabold text-[40px] sm:text-[48px] drop-shadow-[0_0_20px_rgba(255,196,0,0.4)]">29,99</span>
+                {/* Unified Price Layout for Desktop & Mobile */}
+                <div className="flex flex-col items-center lg:items-start text-brand-yellow leading-none">
+                  <div className="flex items-baseline flex-wrap justify-center lg:justify-start gap-x-2">
+                    <span className="font-heading font-extrabold text-[14px] sm:text-[16px] lg:text-[24px] tracking-widest uppercase mb-1 lg:mb-0">HOJE POR APENAS R$</span>
+                    <div className="flex items-baseline">
+                      <span className="font-heading font-extrabold text-[44px] sm:text-[56px] lg:text-[64px] drop-shadow-[0_0_20px_rgba(255,196,0,0.4)]">29</span>
+                      <span className="font-heading font-extrabold text-[20px] sm:text-[24px] lg:text-[28px] self-start mt-1 lg:mt-2">,99</span>
+                    </div>
                   </div>
                 </div>
 
-                <span className="text-[12px] sm:text-[14px] lg:text-[16px] text-white/70 font-medium italic mt-2">
+                <span className="text-[13px] sm:text-[14px] lg:text-[16px] text-white/70 font-medium italic mt-2">
                   Acesso vitalício. (Oferta por tempo limitado)
                 </span>
               </div>
 
-              <PremiumButton className="py-5 w-full">
+              <PremiumButton className="py-5 w-full md:w-[480px]">
                 GARANTIR MEU PACK
               </PremiumButton>
             </div>
 
             {/* Right: Box Mockup */}
-            <div className="col-span-12 lg:col-span-6 relative flex justify-center lg:justify-end perspective-[2000px]">
-               <div className="relative transform lg:rotate-y-[-8deg] lg:rotate-x-[3deg] transition-transform duration-700 lg:-mt-12">
+            <div className="col-span-12 lg:col-span-5 relative flex justify-center lg:justify-end perspective-[2000px]">
+               <div className="relative transform lg:rotate-y-[-8deg] lg:rotate-x-[3deg] transition-transform duration-700">
                   <img 
                     src="/pack_mockup.png" 
                     alt="Pack Gospel Mockup" 
-                    className="w-full max-w-[300px] sm:max-w-[380px] lg:max-w-none lg:w-[115%] drop-shadow-[0_40px_80px_rgba(123,0,255,0.5)]"
+                    className="w-full max-w-[280px] sm:max-w-[350px] lg:max-w-[450px] drop-shadow-[0_40px_80px_rgba(123,0,255,0.5)]"
                   />
                   {/* Reflection */}
                   <img 
