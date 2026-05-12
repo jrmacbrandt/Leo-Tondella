@@ -63,7 +63,7 @@ export default function App() {
     <div className="min-h-screen bg-bg-dark text-white font-sans selection:bg-brand-purple-deep/30 overflow-x-hidden">
       
       {/* Header Logo */}
-      <div className="py-10 flex justify-center">
+      <div className="py-6 flex justify-center">
         <div className="flex items-center gap-2">
           <span className="font-heading font-extrabold text-[32px] tracking-tighter text-gradient-primary leading-none">
             TSTUDIO
@@ -76,7 +76,7 @@ export default function App() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-20 pb-40 overflow-hidden">
+      <section className="relative pt-12 pb-24 md:pt-16 md:pb-32 overflow-hidden">
         {/* Background Posters (Blurred) */}
         <div className="absolute inset-0 z-0 opacity-30 blur-[2px]">
           <img src="/hero_bg.png" alt="" className="w-full h-full object-cover" />
@@ -144,9 +144,9 @@ export default function App() {
       </section>
 
       {/* Showcase Section */}
-      <section className="py-24 bg-bg-dark">
+      <section className="py-12 md:py-20 bg-bg-dark">
         <div className="container-custom">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 md:mb-14">
             <h2 className="font-heading font-extrabold text-[32px] md:text-[42px] uppercase mb-4 tracking-tight leading-none">
               VEJA ALGUMAS ARTES QUE <span className="text-brand-magenta">VOCÊ VAI RECEBER</span>
             </h2>
@@ -211,9 +211,9 @@ export default function App() {
       </section>
 
       {/* Bonus Section */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-12 md:py-20 relative overflow-hidden">
         <div className="container-custom text-center relative z-10">
-          <h2 className="text-[24px] md:text-[48px] font-extrabold mb-20 uppercase leading-tight text-white px-4">
+          <h2 className="text-[22px] md:text-[48px] font-extrabold mb-8 md:mb-14 uppercase leading-tight text-white px-4">
             ADQUIRINDO O <span className="text-gradient-primary italic">PACK GOSPEL</span> HOJE<br/>
             VOCÊ LEVA TUDO ISSO DE BÔNUS
           </h2>
@@ -359,9 +359,9 @@ export default function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-32 bg-bg-alt">
+      <section className="py-12 md:py-20 bg-bg-alt overflow-x-hidden">
         <div className="container-custom">
-          <div className="text-center mb-24">
+          <div className="text-center mb-10 md:mb-16">
             <h2 className="text-[24px] md:text-[42px] font-extrabold uppercase leading-tight tracking-tighter">
               AINDA ESTÁ EM DÚVIDA? VEJA O QUE<br className="hidden md:block" />
               OS MEMBROS FALAM DO PACK GOSPEL.
@@ -421,9 +421,9 @@ export default function App() {
       </section>
 
       {/* Offer Section */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-12 md:py-20 relative overflow-hidden">
         <div className="container-custom text-center">
-          <h2 className="text-[26px] md:text-[42px] font-extrabold uppercase mb-16 leading-tight tracking-tighter">
+          <h2 className="text-[22px] md:text-[42px] font-extrabold uppercase mb-8 md:mb-14 leading-tight tracking-tighter px-4">
             CHEGA DE SÓ OLHAR. <span className="text-gradient-primary">COMECE AGORA</span><br />
             A CRIAR ARTES PROFISSIONAIS.
           </h2>
@@ -466,7 +466,7 @@ export default function App() {
       </section>
 
       {/* Guarantee Section */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-12 md:py-20 overflow-hidden">
         {/* Background Radial Glow */}
         <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/30 via-brand-purple-deep/30 to-brand-magenta/30 opacity-60" />
         
