@@ -271,13 +271,14 @@ export default function App() {
             </div>
           </div>
 
-          <div className="max-w-5xl mx-auto mb-20 px-4">
-            <h3 className="text-[22px] md:text-[38px] font-medium text-white leading-[1.2] tracking-tight">
-              <span className="text-brand-magenta">Videoaulas completas</span> para você mesmo não sabendo<br className="hidden md:block" />
-              nada de design possa criar suas artes.<br className="hidden md:block" />
-              Mais de <span className="text-brand-magenta font-bold">R$ 200 EM BÔNUS DE PRESENTE</span>. Só o conhecimento<br className="hidden md:block" />
-              <span className="text-brand-magenta">dessas aulas vale muito mais do que o seu investimento hoje.</span>
-            </h3>
+          <div className="max-w-7xl mx-auto mb-24 px-4">
+            <div className="text-[20px] md:text-[44px] font-medium text-white leading-[1.1] flex flex-col items-center text-center">
+              <span className="md:whitespace-nowrap"><span className="text-brand-magenta">Videoaulas completas</span> para você mesmo não sabendo</span>
+              <span className="md:whitespace-nowrap">nada de design possa criar suas artes.</span>
+              <div className="h-4 md:h-8" />
+              <span className="md:whitespace-nowrap">Mais de <span className="text-brand-magenta font-bold">R$ 200 EM BÔNUS DE PRESENTE</span>.</span>
+              <span className="md:whitespace-nowrap text-brand-magenta">Só o conhecimento dessas aulas vale muito mais do que o seu investimento hoje.</span>
+            </div>
           </div>
 
           <div className="flex justify-center">
