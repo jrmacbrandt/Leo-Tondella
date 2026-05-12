@@ -493,28 +493,28 @@ export default function App() {
       </section>
 
       {/* Creator Section */}
-      <section className="py-32 bg-bg-dark">
+      <section className="py-16 md:py-32 bg-bg-dark overflow-x-hidden">
         <div className="container-custom">
-           <div className="text-center mb-24">
+           <div className="text-center mb-16 md:mb-24 px-4">
              <span className="text-white font-extrabold text-[12px] uppercase tracking-[0.5em] opacity-80">
                CRIADO POR QUEM ENTENDE DE DESIGN PARA O REINO
              </span>
            </div>
 
-           <div className="grid grid-cols-12 gap-12 items-center max-w-5xl mx-auto">
+           <div className="grid grid-cols-12 gap-0 md:gap-12 items-center max-w-5xl mx-auto">
               {/* Photo (5 columns) */}
-              <div className="col-span-12 md:col-span-5 relative flex justify-center">
-                 <div className="rounded-[2.5rem] p-1 bg-gradient-to-tr from-brand-magenta to-brand-purple-deep shadow-[0_0_60px_rgba(123,0,255,0.3)]">
+              <div className="col-span-12 md:col-span-5 relative flex justify-center px-8 md:px-0 mb-8 md:mb-0">
+                 <div className="rounded-[2.5rem] p-1 bg-gradient-to-tr from-brand-magenta to-brand-purple-deep shadow-[0_0_60px_rgba(123,0,255,0.3)] w-full max-w-[320px] md:max-w-none">
                    <img 
                      src="/creator_photo.png" 
                      alt="Criador" 
-                     className="rounded-[2.4rem] w-full max-w-[400px] object-cover aspect-square"
+                     className="rounded-[2.4rem] w-full object-cover aspect-square"
                    />
                  </div>
               </div>
 
               {/* Bio (7 columns) */}
-              <div className="col-span-12 md:col-span-7 space-y-8 text-text-gray text-18 leading-relaxed font-medium text-center md:text-left">
+              <div className="col-span-12 md:col-span-7 space-y-6 md:space-y-8 text-text-gray text-[15px] md:text-[18px] leading-relaxed font-medium text-center md:text-left px-4 md:px-0">
                 <p>
                   Olá, eu sou o <span className="text-gradient-primary font-extrabold uppercase">Leonardo Tondella</span>, designer à frente da Tondella Studio.
                 </p>
