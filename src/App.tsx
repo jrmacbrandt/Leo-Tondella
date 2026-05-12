@@ -99,14 +99,18 @@ export default function App() {
                 Edite no Celular ou PC, mesmo sem experiência.
               </p>
 
-              <div className="flex flex-col items-center lg:items-start gap-0 mb-12 w-full text-center lg:text-left">
-                <span className="strikethrough-magenta text-[18px] md:text-[20px] font-bold block mb-2">DE: R$ 89,99</span>
-                <div className="flex items-baseline justify-center lg:justify-start gap-1 whitespace-nowrap">
-                  <span className="text-brand-yellow font-heading font-extrabold text-[14px] md:text-[24px]">HOJE POR APENAS R$</span>
-                  <span className="text-brand-yellow font-heading font-extrabold text-[44px] md:text-[56px] leading-none drop-shadow-[0_0_20px_rgba(255,196,0,0.4)]">29</span>
-                  <span className="text-brand-yellow font-heading font-extrabold text-[20px] md:text-[24px] self-start mt-1">,99</span>
+              <div className="mb-12 w-full text-center lg:text-left flex flex-col items-center lg:items-start">
+                <span className="strikethrough-magenta text-[18px] md:text-[20px] font-bold opacity-70 mb-2">DE: R$ 89,99</span>
+                
+                <div className="text-brand-yellow flex flex-col items-center lg:items-start leading-tight">
+                  <span className="font-heading font-extrabold text-[14px] md:text-[22px] tracking-widest uppercase">HOJE POR APENAS</span>
+                  <div className="flex items-baseline gap-1">
+                    <span className="font-heading font-extrabold text-[20px] md:text-[24px]">R$</span>
+                    <span className="font-heading font-extrabold text-[48px] md:text-[64px] drop-shadow-[0_0_20px_rgba(255,196,0,0.4)]">29,99</span>
+                  </div>
                 </div>
-                <span className="text-[14px] md:text-[18px] text-white/70 font-medium italic mt-2 block">
+
+                <span className="text-[14px] md:text-[18px] text-white/70 font-medium italic mt-2">
                   Acesso vitalício. (Oferta por tempo limitado)
                 </span>
               </div>
@@ -319,16 +323,16 @@ export default function App() {
                 para sua igreja?
               </h2>
               
-              <div className="space-y-8 md:space-y-12 w-full">
+              <div className="space-y-8 md:space-y-12 w-full flex flex-col items-center lg:items-start">
                 {/* COM O PACK */}
-                <div className="space-y-4">
+                <div className="space-y-4 w-full">
                   <div className="flex items-center justify-center lg:justify-start gap-3">
                     <h3 className="text-[20px] md:text-[24px] font-extrabold uppercase text-white">COM O PACK</h3>
                     <div className="bg-green-500 rounded-full p-1"><ThumbsUp size={16} className="text-black" /></div>
                   </div>
                   <div className="w-full h-[1px] bg-green-500/30" />
-                  <div className="flex justify-center lg:justify-start">
-                    <ul className="space-y-4 text-text-gray text-[16px] md:text-[20px] font-medium text-left max-w-[280px] md:max-w-none">
+                  <div className="flex justify-center lg:justify-start w-full">
+                    <ul className="space-y-4 text-text-gray text-[16px] md:text-[20px] font-medium text-left max-w-xs md:max-w-none">
                       <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span>Artes modernas e impactantes por <span className="text-brand-yellow font-bold">apenas R$ 29,99</span>.</span></li>
                       <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span><span className="text-brand-yellow font-bold">Sem depender de designers</span> ou perder horas criando do zero.</span></li>
                       <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span>Sem gastar centenas de reais por mês.</span></li>
@@ -338,7 +342,7 @@ export default function App() {
                 </div>
 
                 {/* SEM O PACK */}
-                <div className="space-y-4 opacity-60">
+                <div className="space-y-4 opacity-60 w-full">
                   <div className="flex items-center justify-center lg:justify-start gap-3">
                     <h3 className="text-[20px] md:text-[24px] font-extrabold uppercase text-white/70 tracking-widest">SEU PRAZO</h3>
                     <div className="bg-red-500 rounded-full p-1"><Clock size={16} className="text-white" /></div>
