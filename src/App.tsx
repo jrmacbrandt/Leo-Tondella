@@ -62,21 +62,21 @@ export default function App() {
   return (
     <div className="min-h-screen bg-bg-dark text-white font-sans selection:bg-brand-purple-deep/30 overflow-x-hidden">
       
-      {/* Header Logo */}
-      <div className="py-6 flex justify-center">
-        <div className="flex items-center gap-2">
-          <span className="font-heading font-[900] text-[26px] tracking-tighter text-gradient-primary leading-none">
-            TSTUDIO
-          </span>
-          <div className="flex flex-col leading-[0.9] border-l border-white/20 pl-2">
-            <span className="font-sans font-bold text-[11px] text-white uppercase tracking-tight">Pack</span>
-            <span className="font-sans font-bold text-[11px] text-white uppercase tracking-tight">Gospel</span>
+      {/* Hero Section */}
+      <section className="relative min-h-[850px] flex items-center pt-[120px] pb-[100px] overflow-hidden">
+        {/* Logo over background */}
+        <div className="absolute top-8 left-0 right-0 z-20 flex justify-center pointer-events-none">
+          <div className="flex items-center gap-2">
+            <span className="font-heading font-[900] text-[26px] tracking-tighter text-gradient-primary leading-none">
+              TSTUDIO
+            </span>
+            <div className="flex flex-col leading-[0.9] border-l border-white/20 pl-2">
+              <span className="font-sans font-bold text-[11px] text-white uppercase tracking-tight">Pack</span>
+              <span className="font-sans font-bold text-[11px] text-white uppercase tracking-tight">Gospel</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Hero Section */}
-      <section className="relative min-h-[850px] flex items-center pt-[60px] pb-[100px] overflow-hidden">
         {/* Background Image - 100% size, exactly fitting the section, not cut (stretched if necessary) */}
         <img 
           src="/pack_mockup.png" 
