@@ -76,28 +76,22 @@ export default function App() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-[760px] flex items-center pt-[60px] pb-[160px] overflow-hidden bg-black">
-        {/* Background Posters (Blurred) */}
-        <div className="absolute inset-0 z-0 opacity-20 blur-[3px]">
-          <img src="/hero_bg.png" alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 hero-bg-overlay" />
-        </div>
-
-        {/* Right Side Image (Full Height) */}
-        <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[60%] z-[1] hidden lg:block">
+      <section className="relative min-h-[850px] flex items-center pt-[60px] pb-[100px] overflow-hidden">
+        {/* Full Background Image */}
+        <div className="absolute inset-0 z-0">
           <img 
             src="/pack_mockup.png" 
-            alt="Pack Gospel Mockup" 
-            className="w-full h-full object-cover object-left"
+            alt="Hero Background" 
+            className="w-full h-full object-cover object-center lg:object-right"
           />
-          {/* Gradient fade to black on the left */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent pointer-events-none" />
+          {/* Subtle overlay to ensure text contrast if needed, though Print 2 looks mostly dark */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/20 to-transparent" />
         </div>
 
         <div className="container-custom relative z-10 w-full">
           <div className="flex flex-col lg:flex-row items-center">
-            {/* Left: Text Content */}
-            <div className="w-full lg:w-[55%] flex flex-col items-center lg:items-start text-center lg:text-left px-2 sm:px-0">
+            {/* Text Content */}
+            <div className="w-full lg:w-[60%] flex flex-col items-center lg:items-start text-center lg:text-left px-2 sm:px-0">
               <h1 className="font-heading font-[900] text-[34px] lg:text-[54px] leading-[1.03] mb-4 drop-shadow-2xl w-full max-w-[580px] text-white">
                 Pare de criar artes do zero.<br/>
                 <span className="text-brand-magenta">Artes Gospel 100% Editáveis</span><br/>
@@ -111,7 +105,7 @@ export default function App() {
               <div className="mb-10 w-full flex flex-col items-center lg:items-start">
                 <span className="strikethrough-magenta text-[16px] lg:text-[20px] font-bold opacity-70 mb-2">DE: R$ 89,99</span>
                 
-                {/* Unified Price Layout for Desktop & Mobile */}
+                {/* Unified Price Layout */}
                 <div className="flex flex-col items-center lg:items-start text-brand-yellow leading-none">
                   <div className="flex items-baseline flex-wrap justify-center lg:justify-start gap-x-2">
                     <span className="font-heading font-[900] text-[14px] tracking-widest uppercase mb-1 lg:mb-0 text-white">HOJE POR APENAS R$</span>
@@ -129,15 +123,6 @@ export default function App() {
               <PremiumButton>
                 GARANTIR MEU PACK
               </PremiumButton>
-            </div>
-
-            {/* Mobile: Show image normally below text */}
-            <div className="w-full lg:hidden mt-12 flex justify-center">
-              <img 
-                src="/pack_mockup.png" 
-                alt="Pack Gospel Mockup" 
-                className="w-full max-w-[400px] drop-shadow-[0_20px_40px_rgba(123,0,255,0.3)]"
-              />
             </div>
           </div>
         </div>
