@@ -77,15 +77,15 @@ export default function App() {
 
       {/* Hero Section */}
       <section className="relative min-h-[850px] flex items-center pt-[60px] pb-[100px] overflow-hidden">
-        {/* Full Background Image */}
-        <div className="absolute inset-0 z-0">
+        {/* Background Image - 80% width aligned right */}
+        <div className="absolute top-0 bottom-0 right-0 w-full lg:w-[80%] z-0">
           <img 
             src="/pack_mockup.png" 
             alt="Hero Background" 
-            className="w-full h-full object-cover object-center lg:object-right"
+            className="w-full h-full object-cover object-left"
           />
-          {/* Subtle overlay to ensure text contrast if needed, though Print 2 looks mostly dark */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/20 to-transparent" />
+          {/* Gradient fade to black on the left edge of the image */}
+          <div className="absolute inset-y-0 left-0 w-[40%] bg-gradient-to-r from-black via-black/60 to-transparent pointer-events-none" />
         </div>
 
         <div className="container-custom relative z-10 w-full">
