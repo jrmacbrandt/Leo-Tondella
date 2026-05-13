@@ -9,7 +9,7 @@ import React from 'react';
 // --- Sub-components ---
 
 const PremiumButton = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
-  <button className={`btn-premium px-12 py-5 text-white flex items-center justify-center text-center w-full md:w-auto ${className}`}>
+  <button className={`btn-premium ${className}`}>
     {children}
   </button>
 );
@@ -65,37 +65,35 @@ export default function App() {
       {/* Header Logo */}
       <div className="py-6 flex justify-center">
         <div className="flex items-center gap-2">
-          <span className="font-heading font-extrabold text-[32px] tracking-tighter text-gradient-primary leading-none">
+          <span className="font-heading font-[900] text-[26px] tracking-tighter text-gradient-primary leading-none">
             TSTUDIO
           </span>
           <div className="flex flex-col leading-[0.9] border-l border-white/20 pl-2">
-            <span className="font-sans font-bold text-[14px] text-white uppercase tracking-tight">Pack</span>
-            <span className="font-sans font-bold text-[14px] text-white uppercase tracking-tight">Gospel</span>
+            <span className="font-sans font-bold text-[11px] text-white uppercase tracking-tight">Pack</span>
+            <span className="font-sans font-bold text-[11px] text-white uppercase tracking-tight">Gospel</span>
           </div>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-12 pb-20 md:pt-16 md:pb-28 lg:pt-20 lg:pb-36 overflow-hidden">
+      <section className="relative min-h-[760px] flex items-center pt-[60px] pb-[160px] overflow-hidden">
         {/* Background Posters (Blurred) */}
         <div className="absolute inset-0 z-0 opacity-30 blur-[2px]">
           <img src="/hero_bg.png" alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 hero-bg-blur" />
+          <div className="absolute inset-0 hero-bg-overlay" />
         </div>
 
-        <div className="container-custom relative z-10">
-          <div className="grid grid-cols-12 gap-8 items-center">
+        <div className="container-custom relative z-10 w-full">
+          <div className="flex flex-col lg:flex-row items-center gap-[80px]">
             {/* Left: Text Content */}
-            <div className="col-span-12 lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left px-2 sm:px-0">
-              <h1 className="font-heading font-extrabold text-[24px] sm:text-[32px] lg:text-[42px] xl:text-[48px] leading-[1.1] mb-2 drop-shadow-2xl w-full break-words text-white">
-                Pare de criar artes do zero.
-              </h1>
-              <h2 className="font-heading font-extrabold text-[24px] sm:text-[32px] lg:text-[42px] xl:text-[48px] leading-[1.1] text-brand-magenta mb-8 drop-shadow-2xl w-full break-words">
-                Artes Gospel 100% Editáveis<br className="hidden sm:block"/>
+            <div className="w-full lg:w-[55%] flex flex-col items-center lg:items-start text-center lg:text-left px-2 sm:px-0">
+              <h1 className="font-heading font-[900] text-[34px] lg:text-[54px] leading-[1.03] mb-4 drop-shadow-2xl w-full max-w-[580px] text-white">
+                Pare de criar artes do zero.<br/>
+                <span className="text-brand-magenta">Artes Gospel 100% Editáveis</span><br/>
                 para sua igreja em minutos.
-              </h2>
+              </h1>
               
-              <p className="text-[16px] sm:text-[18px] lg:text-[22px] font-medium text-white mb-10 leading-relaxed w-full">
+              <p className="text-[16px] lg:text-[19px] font-medium text-white mb-10 leading-[1.6] opacity-[0.88] max-w-[580px]">
                 Edite no Celular ou PC, mesmo sem experiência.
               </p>
 
@@ -105,31 +103,30 @@ export default function App() {
                 {/* Unified Price Layout for Desktop & Mobile */}
                 <div className="flex flex-col items-center lg:items-start text-brand-yellow leading-none">
                   <div className="flex items-baseline flex-wrap justify-center lg:justify-start gap-x-2">
-                    <span className="font-heading font-extrabold text-[14px] sm:text-[16px] lg:text-[24px] tracking-widest uppercase mb-1 lg:mb-0">HOJE POR APENAS R$</span>
+                    <span className="font-heading font-[900] text-[14px] tracking-widest uppercase mb-1 lg:mb-0 text-white">HOJE POR APENAS R$</span>
                     <div className="flex items-baseline">
-                      <span className="font-heading font-extrabold text-[44px] sm:text-[56px] lg:text-[64px] drop-shadow-[0_0_20px_rgba(255,196,0,0.4)]">29</span>
-                      <span className="font-heading font-extrabold text-[20px] sm:text-[24px] lg:text-[28px] self-start mt-1 lg:mt-2">,99</span>
+                      <span className="font-heading font-[900] text-[42px] drop-shadow-[0_0_20px_rgba(255,193,0,0.4)]">29,99</span>
                     </div>
                   </div>
                 </div>
 
-                <span className="text-[13px] sm:text-[14px] lg:text-[16px] text-white/70 font-medium italic mt-2">
+                <span className="text-[13px] sm:text-[14px] lg:text-[14px] text-white/70 font-medium italic mt-2">
                   Acesso vitalício. (Oferta por tempo limitado)
                 </span>
               </div>
 
-              <PremiumButton className="py-5 w-full md:w-[480px]">
+              <PremiumButton>
                 GARANTIR MEU PACK
               </PremiumButton>
             </div>
 
             {/* Right: Box Mockup */}
-            <div className="col-span-12 lg:col-span-5 relative flex justify-center lg:justify-end perspective-[2000px]">
+            <div className="w-full lg:w-[45%] relative flex justify-center perspective-[2000px]">
                <div className="relative transform lg:rotate-y-[-8deg] lg:rotate-x-[3deg] transition-transform duration-700">
                   <img 
                     src="/pack_mockup.png" 
                     alt="Pack Gospel Mockup" 
-                    className="w-full max-w-[280px] sm:max-w-[350px] lg:max-w-[450px] drop-shadow-[0_40px_80px_rgba(123,0,255,0.5)]"
+                    className="w-full max-w-[280px] lg:max-w-[470px] drop-shadow-[0_40px_80px_rgba(123,0,255,0.5)]"
                   />
                   {/* Reflection */}
                   <img 
@@ -150,22 +147,22 @@ export default function App() {
 
 
       {/* Showcase Section */}
-      <section className="py-12 md:py-20 bg-bg-dark">
+      <section className="py-[120px] section-gradient">
         <div className="container-custom">
-          <div className="text-center mb-10 md:mb-14">
-            <h2 className="font-heading font-extrabold text-[32px] md:text-[42px] uppercase mb-4 tracking-tight leading-none">
+          <div className="text-center mb-[60px]">
+            <h2 className="font-heading font-[900] text-[42px] uppercase mb-4 tracking-tight leading-none text-white">
               VEJA ALGUMAS ARTES QUE <span className="text-brand-magenta">VOCÊ VAI RECEBER</span>
             </h2>
-            <p className="text-white/80 text-[24px] font-medium max-w-3xl mx-auto leading-tight">
+            <p className="text-white/80 text-[16px] font-medium max-w-3xl mx-auto leading-tight">
               Modelos modernos, impactantes e totalmente personalizáveis.
             </p>
           </div>
 
           {/* Grid Desktop / Static Layout */}
-          <div className="hidden md:grid grid-cols-4 gap-4 mb-16">
+          <div className="hidden md:flex justify-center flex-wrap gap-[28px] mb-16">
             {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="col-span-1">
-                <div className="aspect-[3/4.5] overflow-hidden group shadow-2xl rounded-xl">
+              <div key={i} className="w-[260px] h-[430px] shrink-0">
+                <div className="w-full h-full overflow-hidden group shadow-2xl rounded-xl">
                   <img 
                     src={`/showcase_${i}.png`} 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -206,26 +203,24 @@ export default function App() {
           </div>
 
           {/* Banner Ideal */}
-          <div className="bg-gradient-to-r from-brand-magenta to-brand-blue rounded-2xl md:rounded-full max-w-5xl mx-auto shadow-[0_10px_40px_rgba(123,0,255,0.3)]">
-            <div className="py-4 px-6 md:px-10 text-center">
-               <span className="text-white font-extrabold text-[14px] md:text-[18px] uppercase tracking-normal">
-                 IDEAL PARA IGREJAS, LÍDERES E MÍDIAS QUE PRECISAM POSTAR TODA SEMANA.
-               </span>
-            </div>
+          <div className="bg-gradient-to-r from-brand-magenta to-brand-blue rounded-[20px] mx-auto shadow-[0_10px_40px_rgba(123,0,255,0.3)] w-full md:w-[720px] h-auto md:h-[26px] flex items-center justify-center p-2 md:p-0">
+            <span className="text-white font-[800] text-[11px] uppercase tracking-normal text-center">
+              IDEAL PARA IGREJAS, LÍDERES E MÍDIAS QUE PRECISAM POSTAR TODA SEMANA.
+            </span>
           </div>
         </div>
       </section>
 
       {/* Bonus Section */}
-      <section className="py-12 md:py-20 relative overflow-hidden">
+      <section className="pt-[140px] pb-[120px] relative overflow-hidden section-gradient">
         <div className="container-custom text-center relative z-10">
-          <h2 className="text-[22px] md:text-[48px] font-extrabold mb-8 md:mb-14 uppercase leading-tight text-white px-4">
-            ADQUIRINDO O <span className="text-gradient-primary italic">PACK GOSPEL</span> HOJE<br/>
+          <h2 className="text-[22px] md:text-[48px] font-[900] mb-8 md:mb-14 uppercase leading-tight text-white px-4">
+            ADQUIRINDO O PACK GOSPEL HOJE<br/>
             VOCÊ LEVA TUDO ISSO DE BÔNUS
           </h2>
 
           {/* Grid Desktop */}
-          <div className="hidden md:grid grid-cols-10 gap-4 mb-20">
+          <div className="hidden md:flex justify-center gap-[22px] mb-20 flex-wrap">
             {[
               { text: "CURSO PC: PASSO A PASSO", color: "#405CFF" },
               { text: "CURSO MOBILE: PASSO A PASSO", color: "#405CFF" },
@@ -233,9 +228,9 @@ export default function App() {
               { text: "MEU PROCESSO CRIATIVO", color: "#405CFF" },
               { text: "CENTRAL DE DOWNLOADS", color: "#FF00D4", icon: true },
             ].map((bonus, i) => (
-              <div key={i} className="col-span-2">
+              <div key={i} className="w-[210px] h-[310px] shrink-0">
                 <div 
-                  className="aspect-[9/16] rounded-[2rem] overflow-hidden border border-white/10 relative group"
+                  className="w-full h-full rounded-[2rem] overflow-hidden border border-white/10 relative group"
                   style={{ boxShadow: `0 0 20px ${bonus.color}30` }}
                 >
                   <img 
@@ -279,22 +274,18 @@ export default function App() {
             </div>
           </div>
 
-          <div className="max-w-[1400px] mx-auto mb-24 px-4 flex flex-col items-center text-center">
-            <div className="text-[19px] md:text-[34px] font-medium text-white leading-[1.3]">
-              <div className="md:whitespace-nowrap"><span className="text-brand-magenta">Videoaulas completas</span> para você mesmo não sabendo</div>
-              <div className="md:whitespace-nowrap">nada de design possa criar suas artes.</div>
-              <div className="h-6 md:h-10" />
-              <div className="md:whitespace-nowrap">Mais de <span className="text-brand-magenta font-bold">R$ 200 EM BÔNUS DE PRESENTE</span>.</div>
-              <div className="md:whitespace-nowrap text-brand-magenta">Só o conhecimento dessas aulas vale muito mais do que o seu investimento hoje.</div>
+          <div className="max-w-[700px] mx-auto mb-24 px-4 flex flex-col items-center text-center">
+            <div className="text-[16px] md:text-[20px] font-medium text-white leading-[1.6]">
+              <div><span className="text-brand-magenta">Videoaulas completas</span> para você mesmo não sabendo nada de design possa criar suas artes.</div>
+              <div className="h-4 md:h-6" />
+              <div>Mais de <span className="text-brand-magenta font-bold">R$ 200 EM BÔNUS DE PRESENTE</span>.</div>
+              <div className="text-brand-magenta mt-4">Só o conhecimento dessas aulas vale muito mais do que o seu investimento hoje.</div>
             </div>
           </div>
 
           <div className="flex justify-center">
-            <PremiumButton className="px-20 py-6">
-              <div className="flex flex-col items-center leading-none">
-                <span className="text-18">QUERO GARANTIR</span>
-                <span className="text-[10px] tracking-[0.2em] mt-1 opacity-70">MEU PACK + BÔNUS</span>
-              </div>
+            <PremiumButton>
+              GARANTIR MEU PACK
             </PremiumButton>
           </div>
         </div>
@@ -303,11 +294,11 @@ export default function App() {
       <GlowingDivider />
 
       {/* Comparison Section */}
-      <section className="py-16 md:py-24 overflow-x-hidden">
+      <section className="py-[120px] overflow-x-hidden section-gradient">
         <div className="container-custom">
-          <div className="grid grid-cols-12 gap-0 md:gap-12 items-center">
-            {/* Left: Smartphones Mockup (5 columns) */}
-            <div className="col-span-12 lg:col-span-5 relative flex justify-center px-4 md:px-0">
+          <div className="flex flex-col lg:flex-row gap-[40px] md:gap-[80px] lg:gap-[120px] items-center">
+            {/* Left: Smartphones Mockup (45%) */}
+            <div className="w-full lg:w-[45%] relative flex justify-center px-4 md:px-0">
                <div className="relative">
                  <img 
                    src="/phones_mockup.png" 
@@ -318,38 +309,36 @@ export default function App() {
                </div>
             </div>
 
-            {/* Right: Text & Comparison (7 columns) */}
-            <div className="col-span-12 lg:col-span-7 space-y-8 md:space-y-12 px-4 md:px-0">
-              <h2 className="text-[22px] md:text-[42px] font-extrabold leading-tight uppercase text-center lg:text-left break-words w-full">
-                Por que esse Pack <br className="md:block" />
-                <span className="text-gradient-primary">é a escolha mais inteligente</span><br className="md:block" />
+            {/* Right: Text & Comparison (55%) */}
+            <div className="w-full lg:w-[55%] space-y-8 md:space-y-12 px-4 md:px-0">
+              <h2 className="text-[22px] md:text-[46px] font-[900] leading-[1.2] text-center lg:text-left break-words w-full text-white">
+                Por que esse Pack <br className="hidden md:block" />
+                <span className="text-gradient-primary">é a escolha mais inteligente</span><br className="hidden md:block" />
                 para sua igreja?
               </h2>
               
-              <div className="space-y-8 md:space-y-12 w-full">
+              <div className="space-y-[32px] w-full">
                 {/* COM O PACK */}
-                <div className="space-y-4">
-                  <div className="flex items-center justify-center lg:justify-start gap-3">
-                    <h3 className="text-[20px] md:text-[24px] font-extrabold uppercase text-white">COM O PACK</h3>
-                    <div className="bg-green-500 rounded-full p-1"><ThumbsUp size={16} className="text-black" /></div>
+                <div className="p-[40px] rounded-[16px] border border-[#00FF88] shadow-[0_0_15px_rgba(0,255,136,0.15)] bg-black/40 space-y-4">
+                  <div className="flex items-center justify-center lg:justify-start gap-3 mb-2">
+                    <h3 className="text-[20px] md:text-[24px] font-[900] uppercase text-white">COM O PACK</h3>
+                    <div className="bg-[#00FF88] rounded-full p-1"><ThumbsUp size={16} className="text-black" /></div>
                   </div>
-                  <div className="w-full h-[1px] bg-green-500/30" />
-                  <ul className="space-y-4 text-text-gray text-[16px] md:text-[20px] font-medium text-left w-full">
-                    <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span className="min-w-0">Artes modernas e impactantes por <span className="text-brand-yellow font-bold">apenas R$ 29,99</span>.</span></li>
-                    <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span className="min-w-0"><span className="text-brand-yellow font-bold">Sem depender de designers</span> ou perder horas criando do zero.</span></li>
-                    <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span className="min-w-0">Sem gastar centenas de reais por mês.</span></li>
-                    <li className="flex items-start gap-3"><span className="text-green-500 mt-1.5 shrink-0">•</span> <span className="min-w-0">Você investe uma única vez e tem <span className="text-brand-yellow font-bold">acesso vitalício</span>.</span></li>
+                  <ul className="space-y-4 text-text-gray text-[16px] leading-[1.8] font-medium text-left w-full">
+                    <li className="flex items-start gap-3"><span className="text-[#00FF88] mt-1 shrink-0">•</span> <span className="min-w-0">Artes modernas e impactantes por <span className="text-brand-yellow font-bold">apenas R$ 29,99</span>.</span></li>
+                    <li className="flex items-start gap-3"><span className="text-[#00FF88] mt-1 shrink-0">•</span> <span className="min-w-0"><span className="text-brand-yellow font-bold">Sem depender de designers</span> ou perder horas criando do zero.</span></li>
+                    <li className="flex items-start gap-3"><span className="text-[#00FF88] mt-1 shrink-0">•</span> <span className="min-w-0">Sem gastar centenas de reais por mês.</span></li>
+                    <li className="flex items-start gap-3"><span className="text-[#00FF88] mt-1 shrink-0">•</span> <span className="min-w-0">Você investe uma única vez e tem <span className="text-brand-yellow font-bold">acesso vitalício</span>.</span></li>
                   </ul>
                 </div>
 
                 {/* SEM O PACK */}
-                <div className="space-y-4 opacity-60">
-                  <div className="flex items-center justify-center lg:justify-start gap-3">
-                    <h3 className="text-[20px] md:text-[24px] font-extrabold uppercase text-white/70 tracking-widest">SEU PRAZO</h3>
-                    <div className="bg-red-500 rounded-full p-1"><Clock size={16} className="text-white" /></div>
+                <div className="p-[40px] rounded-[16px] border border-[#FF4D4D] shadow-[0_0_15px_rgba(255,77,77,0.15)] bg-black/40 space-y-4">
+                  <div className="flex items-center justify-center lg:justify-start gap-3 mb-2">
+                    <h3 className="text-[20px] md:text-[24px] font-[900] uppercase text-white/70 tracking-widest">SEU PRAZO</h3>
+                    <div className="bg-[#FF4D4D] rounded-full p-1"><Clock size={16} className="text-white" /></div>
                   </div>
-                  <div className="w-full h-[1px] bg-red-500/30" />
-                  <p className="text-text-gray text-[16px] md:text-[20px] leading-relaxed text-center lg:text-left w-full">
+                  <p className="text-text-gray text-[16px] leading-[1.8] text-center lg:text-left w-full">
                     Criar artes do zero consome tempo, energia e criatividade. Muitas vezes o resultado não fica profissional, impactando negativamente a imagem da sua igreja. Contratar um designer pode custar entre <span className="text-white font-bold">R$ 50 e R$ 150</span> por arte.
                   </p>
                 </div>
@@ -357,7 +346,7 @@ export default function App() {
 
               <div className="flex justify-center lg:justify-start pt-4 md:pt-8 relative w-full">
                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-magenta/10 blur-[80px] -z-10" />
-                 <PremiumButton className="w-full md:w-auto">GARANTIR MEU PACK</PremiumButton>
+                 <PremiumButton>GARANTIR MEU PACK</PremiumButton>
               </div>
             </div>
           </div>
@@ -365,17 +354,17 @@ export default function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-12 md:py-20 bg-bg-alt overflow-x-hidden">
+      <section className="py-[120px] section-gradient overflow-x-hidden">
         <div className="container-custom">
           <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-[24px] md:text-[42px] font-extrabold uppercase leading-tight tracking-tighter">
+            <h2 className="text-[24px] md:text-[42px] font-[900] uppercase leading-tight tracking-tighter text-white">
               AINDA ESTÁ EM DÚVIDA? VEJA O QUE<br className="hidden md:block" />
               OS MEMBROS FALAM DO PACK GOSPEL.
             </h2>
           </div>
 
           {/* Testimonial Cards (3x3 grid) */}
-          <div className="grid grid-cols-12 gap-4 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[28px] mb-16">
             {[
               "A gente não tinha identidade nenhuma, agora tá tudo padronizado, bonito... outro nível!",
               "O pastor até comentou hoje da arte kkk nem esperava isso.",
@@ -387,20 +376,20 @@ export default function App() {
               "Sou líder de mídia na igreja e isso aqui me salvou! Já vem praticamente pronto.",
               "Eu sempre travava pra fazer arte, agora foi bem mais rápido."
             ].map((text, i) => (
-              <div key={i} className="col-span-12 md:col-span-4">
-                <div className="bg-white p-6 rounded-[1.5rem] flex flex-col h-full shadow-2xl">
+              <div key={i} className="w-full min-h-[130px]">
+                <div className="bg-[#ffffff] p-[22px] rounded-[14px] flex flex-col h-full shadow-2xl">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-full overflow-hidden bg-bg-dark shrink-0">
+                    <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 bg-gray-200">
                       <img src={`https://i.pravatar.cc/150?u=${i + 100}`} alt="User" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-bg-dark text-18">Nome Sobrenome</h4>
+                      <h4 className="font-[900] text-[#000000] text-[16px]">Nome Sobrenome</h4>
                       <div className="flex text-brand-yellow">
                         {[1, 2, 3, 4, 5].map(s => <Star key={s} size={14} fill="currentColor" />)}
                       </div>
                     </div>
                   </div>
-                  <p className="text-bg-dark/80 text-18 leading-snug flex-1 italic">"{text}"</p>
+                  <p className="text-[#000000]/80 text-[15px] leading-snug flex-1 italic font-medium">"{text}"</p>
                 </div>
               </div>
             ))}
@@ -409,15 +398,15 @@ export default function App() {
           {/* Video Testimonials */}
           <div className="flex flex-wrap justify-center gap-6 mt-16 max-w-4xl mx-auto">
              {[1, 2].map((v) => (
-               <div key={v} className="flex-1 min-w-[320px] aspect-video bg-bg-dark rounded-[2rem] border-[3px] border-white/5 relative overflow-hidden group cursor-pointer shadow-2xl">
+               <div key={v} className="w-[240px] h-[120px] bg-bg-dark rounded-2xl border-[2px] border-white/5 relative overflow-hidden group cursor-pointer shadow-2xl shrink-0">
                  <img 
-                   src={`https://placehold.co/800x450/050505/white?text=DEPOIMENTO+VIDEO+${v}`} 
+                   src={`https://placehold.co/480x240/050505/white?text=DEPOIMENTO+VIDEO+${v}`} 
                    className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" 
                    alt="Video Depoimento" 
                  />
                  <div className="absolute inset-0 flex items-center justify-center">
-                   <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:scale-125 transition-transform duration-300">
-                     <div className="w-0 h-0 border-y-[12px] border-y-transparent border-l-[20px] border-l-white translate-x-1" />
+                   <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                     <div className="w-0 h-0 border-y-[8px] border-y-transparent border-l-[14px] border-l-white translate-x-[2px]" />
                    </div>
                  </div>
                </div>
@@ -427,21 +416,21 @@ export default function App() {
       </section>
 
       {/* Offer Section */}
-      <section className="py-12 md:py-20 relative overflow-hidden">
+      <section className="py-[120px] relative overflow-hidden section-gradient">
         <div className="container-custom text-center">
-          <h2 className="text-[22px] md:text-[42px] font-extrabold uppercase mb-8 md:mb-14 leading-tight tracking-tighter px-4">
+          <h2 className="text-[22px] md:text-[42px] font-[900] uppercase mb-8 md:mb-14 leading-tight tracking-tighter px-4 text-white">
             CHEGA DE SÓ OLHAR. <span className="text-gradient-primary">COMECE AGORA</span><br />
             A CRIAR ARTES PROFISSIONAIS.
           </h2>
 
-          <div className="max-w-[400px] mx-auto offer-card-border p-12 text-center shadow-[0_0_100px_rgba(123,0,255,0.25)]">
+          <div className="mx-auto offer-card-border p-[40px] flex flex-col w-full md:w-[360px] min-h-[610px] items-center text-center shadow-[0_0_100px_rgba(123,0,255,0.25)]">
              <div className="inline-block border border-white/20 rounded-full px-6 py-2 mb-10">
-               <span className="text-white font-extrabold uppercase tracking-[0.3em] text-[12px]">
+               <span className="text-white font-[900] uppercase tracking-[0.3em] text-[12px]">
                  Pack Gospel
                </span>
              </div>
 
-             <ul className="text-left space-y-6 mb-12 text-text-gray text-18 font-medium">
+             <ul className="text-left space-y-[20px] mb-auto text-text-gray text-[16px] font-medium w-full px-4">
                {[
                  "Videoaula editando pelo celular",
                  "Videoaula editando pelo pc",
@@ -449,48 +438,45 @@ export default function App() {
                  "Processo Criativo (do zero)",
                  "Atualizações",
                  "Acesso vitalício",
-                 "Garantia incondicional de 7 dias"
+                 "Garantia de 7 dias"
                ].map((item, i) => (
-                 <li key={i} className="flex items-center gap-4">
-                   <div className="bg-brand-magenta rounded-full p-1 shrink-0"><Check size={16} strokeWidth={4} className="text-white" /></div>
-                   {item}
+                 <li key={i} className="flex items-start gap-4">
+                   <div className="bg-[#E500FF] rounded-full p-1 shrink-0 mt-0.5"><Check size={14} strokeWidth={4} className="text-white" /></div>
+                   <span className="leading-tight">{item}</span>
                  </li>
                ))}
              </ul>
 
-             <div className="mb-10 pt-10 border-t border-white/10">
-               <span className="text-text-gray font-bold text-18 block mb-2">Tudo isso hoje por apenas:</span>
-               <div className="text-48 font-extrabold text-brand-yellow drop-shadow-[0_0_15px_rgba(255,196,0,0.4)]">
+             <div className="mb-10 pt-8 border-t border-white/10 w-full mt-8">
+               <span className="text-text-gray font-bold text-[16px] block mb-2">Tudo isso hoje por apenas:</span>
+               <div className="text-[52px] font-[900] text-brand-yellow drop-shadow-[0_0_15px_rgba(255,196,0,0.4)] leading-none mb-2">
                  R$ 29,99
                </div>
-               <span className="text-text-gray/50 text-[12px] uppercase font-bold tracking-widest mt-2 block">ou 6x de R$ 5,63 no cartão</span>
+               <span className="text-text-gray/50 text-[12px] uppercase font-bold tracking-widest block">ou 6x de R$ 5,63 no cartão</span>
              </div>
 
-             <PremiumButton className="w-full py-6">GARANTIR ACESSO AGORA</PremiumButton>
+             <PremiumButton>GARANTIR ACESSO</PremiumButton>
           </div>
         </div>
       </section>
 
       {/* Guarantee Section */}
-      <section className="relative py-12 md:py-20 overflow-hidden">
-        {/* Background Radial Glow */}
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/30 via-brand-purple-deep/30 to-brand-magenta/30 opacity-60" />
-        
+      <section className="relative py-[120px] overflow-hidden" style={{ background: 'linear-gradient(90deg,#1f0040,#0059ff,#5f007a)' }}>
         <div className="container-custom relative z-10">
            <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-16">
              <div className="shrink-0 flex items-center justify-center">
-                <div className="w-40 h-40 bg-bg-dark rounded-full flex flex-col items-center justify-center jagged-seal border-[4px] border-brand-magenta shadow-[0_0_50px_rgba(255,0,212,0.5)]">
-                  <div className="text-56 font-extrabold text-brand-blue leading-none">7</div>
-                  <div className="text-[12px] font-extrabold text-white uppercase tracking-[0.3em] mt-1">DIAS</div>
-                  <div className="text-[10px] font-extrabold text-brand-magenta uppercase tracking-[0.2em]">GARANTIA</div>
+                <div className="w-[208px] h-[208px] bg-bg-dark rounded-full flex flex-col items-center justify-center jagged-seal border-[4px] border-[#4776FF] shadow-[0_0_50px_rgba(71,118,255,0.8)] relative">
+                  <div className="text-[80px] font-[900] text-brand-blue leading-none">7</div>
+                  <div className="text-[16px] font-[900] text-white uppercase tracking-[0.3em] mt-1">DIAS</div>
+                  <div className="text-[12px] font-[900] text-[#E500FF] uppercase tracking-[0.2em]">GARANTIA</div>
                 </div>
              </div>
              
              <div className="text-center md:text-left max-w-lg">
-               <h3 className="text-[32px] font-extrabold mb-4 uppercase leading-tight text-white drop-shadow-lg">
+               <h3 className="text-[36px] font-[900] mb-4 uppercase leading-tight text-white drop-shadow-lg">
                  SE VOCÊ NÃO GOSTAR,<br/>DEVOLVEMOS SEU DINHEIRO.
                </h3>
-               <p className="text-text-gray text-18 font-medium leading-relaxed drop-shadow-sm">
+               <p className="text-white/90 text-[18px] font-medium leading-[1.6] drop-shadow-sm">
                  Teste o Pack Gospel por 7 dias sem risco. Se por algum motivo você não se sentir satisfeito, é só solicitar o estorno direto pela plataforma que eu devolvo todo o seu investimento sem burocracia.
                </p>
              </div>
@@ -499,39 +485,39 @@ export default function App() {
       </section>
 
       {/* Creator Section */}
-      <section className="py-16 md:py-32 bg-bg-dark overflow-x-hidden">
+      <section className="py-[120px] overflow-x-hidden section-gradient">
         <div className="container-custom">
-           <div className="text-center mb-16 md:mb-24 px-4">
-             <span className="text-white font-extrabold text-[12px] uppercase tracking-[0.5em] opacity-80">
+           <div className="text-center mb-[80px] px-4">
+             <span className="text-white font-[900] text-[12px] uppercase tracking-[0.5em] opacity-80">
                CRIADO POR QUEM ENTENDE DE DESIGN PARA O REINO
              </span>
            </div>
 
-           <div className="grid grid-cols-12 gap-0 md:gap-12 items-center max-w-5xl mx-auto">
-              {/* Photo (5 columns) */}
-              <div className="col-span-12 md:col-span-5 relative flex justify-center px-8 md:px-0 mb-8 md:mb-0">
-                 <div className="rounded-[2.5rem] p-1 bg-gradient-to-tr from-brand-magenta to-brand-purple-deep shadow-[0_0_60px_rgba(123,0,255,0.3)] w-full max-w-[320px] md:max-w-none">
+           <div className="flex flex-col md:flex-row gap-[40px] md:gap-[60px] items-center max-w-5xl mx-auto">
+              {/* Photo (48%) */}
+              <div className="w-full md:w-[48%] relative flex justify-center px-4 md:px-0 mb-8 md:mb-0">
+                 <div className="rounded-[2.5rem] p-[2px] bg-[#E500FF] shadow-[0_0_60px_rgba(229,0,255,0.4)] w-full max-w-[500px] h-auto md:h-[360px]">
                    <img 
                      src="/creator_photo.png" 
                      alt="Criador" 
-                     className="rounded-[2.4rem] w-full object-cover aspect-square"
+                     className="rounded-[2.4rem] w-full h-full object-cover"
                    />
                  </div>
               </div>
 
-              {/* Bio (7 columns) */}
-              <div className="col-span-12 md:col-span-7 space-y-6 md:space-y-8 text-text-gray text-[15px] md:text-[18px] leading-relaxed font-medium text-center md:text-left px-4 md:px-0">
+              {/* Bio (52%) */}
+              <div className="w-full md:w-[52%] space-y-6 md:space-y-8 text-text-gray text-[17px] leading-[1.8] font-medium text-center md:text-left px-4 md:px-0">
                 <p>
-                  Olá, eu sou o <span className="text-gradient-primary font-extrabold uppercase">Leonardo Tondella</span>, designer à frente da Tondella Studio.
+                  Olá, eu sou o <span className="text-gradient-primary font-[900] text-[28px] uppercase block mb-4 mt-2">Leonardo Tondella</span> designer à frente da Tondella Studio.
                 </p>
                 <p>
                   <span className="text-white font-bold">Desenvolvi este pack</span> após notar que centenas de líderes e ministérios perdem horas valiosas tentando criar artes que, no fim, não passam a mensagem que deveriam.
                 </p>
                 <p>
-                  Reuni toda a minha experiência para criar designs <span className="text-brand-magenta font-extrabold">profissionais, elegantes</span> e extremamente fáceis de editar.
+                  Reuni toda a minha experiência para criar designs <span className="text-brand-magenta font-[900]">profissionais, elegantes</span> e extremamente fáceis de editar.
                 </p>
                 <p>
-                  Meu foco está no que realmente importa: <span className="text-gradient-primary font-extrabold uppercase underline underline-offset-8">a mensagem.</span> Deixe o design profissional com quem já é referência no mercado.
+                  Meu foco está no que realmente importa: <span className="text-gradient-primary font-[900] uppercase underline underline-offset-8">a mensagem.</span> Deixe o design profissional com quem já é referência no mercado.
                 </p>
               </div>
            </div>
