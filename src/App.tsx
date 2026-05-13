@@ -76,15 +76,26 @@ export default function App() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-[760px] flex items-center pt-[60px] pb-[160px] overflow-hidden">
+      <section className="relative min-h-[760px] flex items-center pt-[60px] pb-[160px] overflow-hidden bg-black">
         {/* Background Posters (Blurred) */}
-        <div className="absolute inset-0 z-0 opacity-30 blur-[2px]">
+        <div className="absolute inset-0 z-0 opacity-20 blur-[3px]">
           <img src="/hero_bg.png" alt="" className="w-full h-full object-cover" />
           <div className="absolute inset-0 hero-bg-overlay" />
         </div>
 
+        {/* Right Side Image (Full Height) */}
+        <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[60%] z-[1] hidden lg:block">
+          <img 
+            src="/pack_mockup.png" 
+            alt="Pack Gospel Mockup" 
+            className="w-full h-full object-cover object-left"
+          />
+          {/* Gradient fade to black on the left */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent pointer-events-none" />
+        </div>
+
         <div className="container-custom relative z-10 w-full">
-          <div className="flex flex-col lg:flex-row items-center gap-[80px]">
+          <div className="flex flex-col lg:flex-row items-center">
             {/* Left: Text Content */}
             <div className="w-full lg:w-[55%] flex flex-col items-center lg:items-start text-center lg:text-left px-2 sm:px-0">
               <h1 className="font-heading font-[900] text-[34px] lg:text-[54px] leading-[1.03] mb-4 drop-shadow-2xl w-full max-w-[580px] text-white">
@@ -120,21 +131,13 @@ export default function App() {
               </PremiumButton>
             </div>
 
-            {/* Right: Box Mockup */}
-            <div className="w-full lg:w-[45%] relative flex justify-center perspective-[2000px]">
-               <div className="relative transform lg:rotate-y-[-8deg] lg:rotate-x-[3deg] transition-transform duration-700">
-                  <img 
-                    src="/pack_mockup.png" 
-                    alt="Pack Gospel Mockup" 
-                    className="w-full max-w-[280px] lg:max-w-[470px] drop-shadow-[0_40px_80px_rgba(123,0,255,0.5)]"
-                  />
-                  {/* Reflection */}
-                  <img 
-                    src="/pack_mockup.png" 
-                    alt="" 
-                    className="absolute -bottom-full left-0 w-full reflection-bottom pointer-events-none"
-                  />
-               </div>
+            {/* Mobile: Show image normally below text */}
+            <div className="w-full lg:hidden mt-12 flex justify-center">
+              <img 
+                src="/pack_mockup.png" 
+                alt="Pack Gospel Mockup" 
+                className="w-full max-w-[400px] drop-shadow-[0_20px_40px_rgba(123,0,255,0.3)]"
+              />
             </div>
           </div>
         </div>
