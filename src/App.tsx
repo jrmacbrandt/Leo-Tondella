@@ -77,14 +77,12 @@ export default function App() {
 
       {/* Hero Section */}
       <section className="relative min-h-[850px] flex items-center pt-[60px] pb-[100px] overflow-hidden">
-        {/* Background Image - 80% size, proportional, not cut, aligned right */}
-        <div className="absolute inset-y-0 right-0 w-full lg:w-[80%] z-0 flex justify-end">
-          <img 
-            src="/pack_mockup.png" 
-            alt="Hero Background" 
-            className="h-full w-auto object-contain"
-          />
-        </div>
+        {/* Background Image - 100% size, exactly fitting the section, not cut (stretched if necessary) */}
+        <img 
+          src="/pack_mockup.png" 
+          alt="Hero Background" 
+          className="absolute inset-0 w-full h-full object-fill z-0"
+        />
 
         <div className="container-custom relative z-10 w-full">
           <div className="flex flex-col lg:flex-row items-center">
