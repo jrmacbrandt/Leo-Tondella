@@ -90,8 +90,8 @@ export default function App() {
             <div className="w-full lg:w-[60%] flex flex-col items-center lg:items-start text-center lg:text-left px-2 sm:px-0">
               <h1 className="font-heading font-[900] text-[24px] lg:text-[39px] leading-[1.03] mb-4 drop-shadow-2xl w-full max-w-[580px] text-white">
                 Pare de criar artes do zero.<br/>
-                <span className="text-brand-magenta">Artes Gospel 100% Editáveis</span><br/>
-                para sua igreja em minutos.
+                <span className="text-brand-magenta">Artes Gospel 100% Editáveis<br/>
+                para sua igreja em minutos.</span>
               </h1>
               
               <p className="text-[16px] lg:text-[19px] font-medium text-white mb-10 leading-[1.6] opacity-[0.88] max-w-[580px]">
