@@ -77,15 +77,13 @@ export default function App() {
 
       {/* Hero Section */}
       <section className="relative min-h-[850px] flex items-center pt-[60px] pb-[100px] overflow-hidden">
-        {/* Background Image - 80% width aligned right */}
-        <div className="absolute top-0 bottom-0 right-0 w-full lg:w-[80%] z-0">
+        {/* Background Image - 80% size, proportional, not cut, aligned right */}
+        <div className="absolute inset-y-0 right-0 w-full lg:w-[80%] z-0 flex justify-end">
           <img 
             src="/pack_mockup.png" 
             alt="Hero Background" 
-            className="w-full h-full object-cover object-left"
+            className="h-full w-auto object-contain"
           />
-          {/* Gradient fade to black on the left edge of the image */}
-          <div className="absolute inset-y-0 left-0 w-[40%] bg-gradient-to-r from-black via-black/60 to-transparent pointer-events-none" />
         </div>
 
         <div className="container-custom relative z-10 w-full">
