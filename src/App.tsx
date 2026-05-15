@@ -292,7 +292,7 @@ export default function App() {
           <div className="flex flex-col lg:flex-row gap-[40px] md:gap-[80px] lg:gap-[120px] items-start">
             {/* Left Column: Title (45%) */}
             <div className="w-full lg:w-[45%]">
-              <h2 className="text-[22px] md:text-[46px] font-[900] leading-[1.2] text-center lg:text-left break-words w-full text-white">
+              <h2 className="text-[17px] md:text-[34px] font-[900] leading-[1.2] text-center lg:text-left break-words w-full text-white">
                 Por que esse Pack <br className="hidden md:block" />
                 <span className="text-gradient-primary">é a escolha mais inteligente</span><br className="hidden md:block" />
                 para sua igreja?
