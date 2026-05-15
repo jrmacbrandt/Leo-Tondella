@@ -98,7 +98,7 @@ export default function App() {
                 Edite no Celular ou PC, mesmo sem experiência.
               </p>
 
-              <div className="mb-10 w-full flex flex-col items-center lg:items-start -space-y-1">
+              <div className="mb-10 w-full flex flex-col items-center lg:items-start -space-y-3">
                 <span className="strikethrough-magenta text-[16px] lg:text-[20px] font-bold">DE: R$ 89,99</span>
                 
                 {/* Unified Price Layout */}
