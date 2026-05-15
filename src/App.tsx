@@ -328,11 +328,11 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="flex justify-center lg:justify-start pt-4 md:pt-8 relative w-full">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-magenta/10 blur-[80px] -z-10" />
-                <PremiumButton>QUERO GARANTIR<br />MEU PACK + BÔNUS</PremiumButton>
-              </div>
-            </div>
+          </div>
+
+          <div className="flex justify-center pt-12 md:pt-20 relative w-full">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-magenta/10 blur-[80px] -z-10" />
+            <PremiumButton>QUERO GARANTIR<br />MEU PACK + BÔNUS</PremiumButton>
           </div>
         </div>
       </section>
