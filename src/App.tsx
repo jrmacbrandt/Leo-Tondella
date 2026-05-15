@@ -258,7 +258,7 @@ export default function App() {
           </div>
 
           <div className="max-w-[700px] mx-auto mb-16 md:mb-20 px-4 flex flex-col items-center text-center">
-            <div className="text-[16px] md:text-[20px] font-medium text-white leading-[1.6]">
+            <div className="text-[19px] md:text-[23px] font-medium text-white leading-[1.6]">
               <div><span className="text-brand-magenta">Videoaulas completas</span> para você mesmo não sabendo nada de design possa criar suas artes.</div>
               <div className="h-4 md:h-6" />
               <div>Mais de <span className="text-brand-magenta font-bold">R$ 200 EM BÔNUS DE PRESENTE</span>.</div>
