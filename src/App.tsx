@@ -94,7 +94,7 @@ export default function App() {
                 para sua igreja em minutos.</span>
               </h1>
               
-              <p className="text-[20pt] font-medium text-white mb-10 leading-[1.6] opacity-[0.88] max-w-[580px]">
+              <p className="text-[18pt] font-medium text-white mb-10 leading-[1.6] opacity-[0.88] max-w-[580px]">
                 Edite no Celular ou PC, mesmo sem experiência.
               </p>
 
