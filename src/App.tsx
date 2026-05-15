@@ -136,7 +136,7 @@ export default function App() {
             <h2 className="font-heading font-[900] text-[42px] uppercase mb-4 tracking-tight leading-none text-white">
               VEJA ALGUMAS ARTES QUE <span className="text-brand-magenta">VOCÊ VAI RECEBER</span>
             </h2>
-            <p className="text-white/80 text-[16px] font-medium max-w-3xl mx-auto leading-tight">
+            <p className="text-white/80 text-[16pt] font-medium max-w-3xl mx-auto leading-tight">
               Modelos modernos, impactantes e totalmente personalizáveis.
             </p>
           </div>
