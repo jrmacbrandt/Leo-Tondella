@@ -140,7 +140,7 @@ h1, h2, h3, h4, .font-heading {
 
 .strikethrough-magenta {
   position: relative;
-  color: #BDBDBD;
+  color: #FFFFFF;
 }
 
 .strikethrough-magenta::after {

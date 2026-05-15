@@ -99,7 +99,7 @@ export default function App() {
               </p>
 
               <div className="mb-10 w-full flex flex-col items-center lg:items-start">
-                <span className="strikethrough-magenta text-[16px] lg:text-[20px] font-bold opacity-70 mb-2">DE: R$ 89,99</span>
+                <span className="strikethrough-magenta text-[16px] lg:text-[20px] font-bold mb-2">DE: R$ 89,99</span>
                 
                 {/* Unified Price Layout */}
                 <div className="flex flex-col items-center lg:items-start text-brand-yellow leading-none">
