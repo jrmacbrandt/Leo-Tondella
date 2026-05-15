@@ -328,6 +328,7 @@ export default function App() {
                 </div>
               </div>
 
+            </div>
           </div>
 
           <div className="flex justify-center pt-12 md:pt-20 relative w-full">
