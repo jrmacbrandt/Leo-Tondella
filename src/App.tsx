@@ -384,7 +384,7 @@ export default function App() {
         <div className="container-custom text-center">
           <h2 className="text-[22px] md:text-[42px] font-[900] uppercase mb-8 md:mb-14 leading-tight tracking-tighter px-4 text-white">
             CHEGA DE SÓ OLHAR. <span className="text-gradient-primary">COMECE AGORA</span><br />
-            A CRIAR ARTES PROFISSIONAIS.
+            <span className="text-gradient-primary">A CRIAR ARTES</span> PROFISSIONAIS.
           </h2>
 
           <div className="mx-auto offer-card-border p-[40px] flex flex-col w-full md:w-[360px] min-h-[610px] items-center text-center shadow-[0_0_100px_rgba(123,0,255,0.25)]">
