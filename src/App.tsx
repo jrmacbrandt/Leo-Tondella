@@ -438,22 +438,22 @@ export default function App() {
       </section>
 
       {/* Guarantee Section */}
-      <section className="relative section-padding overflow-hidden" style={{ background: 'linear-gradient(90deg,#1f0040,#0059ff,#5f007a)' }}>
+      <section className="relative section-padding overflow-hidden" style={{ background: 'linear-gradient(to right, #E500FF 0%, #7B00FF 35%, #0059FF 85%, #000000 100%)' }}>
         <div className="container-custom relative z-10">
-          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-16">
+          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
             <div className="shrink-0 flex items-center justify-center">
-              <div className="w-[208px] h-[208px] bg-bg-dark rounded-full flex flex-col items-center justify-center jagged-seal border-[4px] border-[#4776FF] shadow-[0_0_50px_rgba(71,118,255,0.8)] relative">
-                <div className="text-[80px] font-[900] text-brand-blue leading-none">7</div>
-                <div className="text-[16px] font-[900] text-white uppercase tracking-[0.3em] mt-1">DIAS</div>
-                <div className="text-[12px] font-[900] text-[#E500FF] uppercase tracking-[0.2em]">GARANTIA</div>
-              </div>
+              <img
+                src="/selo-garantia.png"
+                alt="7 Dias de Garantia"
+                className="w-[200px] md:w-[260px] drop-shadow-[0_0_30px_rgba(229,0,255,0.3)]"
+              />
             </div>
 
             <div className="text-center md:text-left max-w-lg">
-              <h3 className="text-[36px] font-[900] mb-4 uppercase leading-tight text-white drop-shadow-lg">
-                SE VOCÊ NÃO GOSTAR,<br />DEVOLVEMOS SEU DINHEIRO.
+              <h3 className="text-[32px] md:text-[36px] font-[900] mb-4 uppercase leading-tight text-white drop-shadow-lg">
+                SE VOCÊ NÃO GOSTAR,<br />DEVOLVO SEU DINHEIRO.
               </h3>
-              <p className="text-white/90 text-[18px] font-medium leading-[1.6] drop-shadow-sm">
+              <p className="text-white/90 text-[16px] md:text-[18px] font-medium leading-[1.6] drop-shadow-sm">
                 Teste o Pack Gospel por 7 dias sem risco. Se por algum motivo você não se sentir satisfeito, é só solicitar o estorno direto pela plataforma que eu devolvo todo o seu investimento sem burocracia.
               </p>
             </div>
