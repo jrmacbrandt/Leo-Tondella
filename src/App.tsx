@@ -387,39 +387,50 @@ export default function App() {
             <span className="text-gradient-primary">A CRIAR ARTES</span> PROFISSIONAIS.
           </h2>
 
-          <div className="mx-auto offer-card-border p-[40px] flex flex-col w-full md:w-[360px] min-h-[610px] items-center text-center shadow-[0_0_100px_rgba(123,0,255,0.25)]">
-            <div className="inline-block border border-white/20 rounded-full px-6 py-2 mb-10">
-              <span className="text-white font-[900] uppercase tracking-[0.3em] text-[12px]">
-                Pack Gospel
-              </span>
+          <div className="mx-auto offer-card-border p-[40px] flex flex-col w-full md:w-[380px] min-h-[660px] items-center text-center relative mb-20">
+            {/* Header */}
+            <div className="mb-6">
+              <span className="text-brand-magenta font-black uppercase text-[12px] tracking-[0.3em] block mb-1">TSTUDIO</span>
+              <h3 className="text-white text-[48px] font-[900] leading-[0.9] uppercase tracking-tighter">
+                Pack<br />Gospel
+              </h3>
             </div>
 
-            <ul className="text-left space-y-[20px] mb-auto text-text-gray text-[16px] font-medium w-full px-4">
+            <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent my-6" />
+
+            {/* List */}
+            <ul className="text-left space-y-[18px] mb-8 text-white text-[15px] font-bold w-full px-2">
               {[
                 "Videoaula editando pelo celular",
                 "Videoaula editando pelo pc",
-                "Milhares de fontes premium",
-                "Processo Criativo (do zero)",
+                "Videoaula criando arte do zero",
+                "Download de fontes e programas",
                 "Atualizações",
                 "Acesso vitalício",
-                "Garantia de 7 dias"
+                "Garantia incondicional de 7 dias"
               ].map((item, i) => (
-                <li key={i} className="flex items-start gap-4">
-                  <div className="bg-[#E500FF] rounded-full p-1 shrink-0 mt-0.5"><Check size={14} strokeWidth={4} className="text-white" /></div>
+                <li key={i} className="flex items-center gap-4">
+                  <div className="bg-brand-magenta rounded-full p-1 shrink-0"><Check size={14} strokeWidth={4} className="text-white" /></div>
                   <span className="leading-tight">{item}</span>
                 </li>
               ))}
             </ul>
 
-            <div className="mb-10 pt-8 border-t border-white/10 w-full mt-8">
-              <span className="text-text-gray font-bold text-[16px] block mb-2">Tudo isso hoje por apenas:</span>
-              <div className="text-[52px] font-[900] text-brand-yellow drop-shadow-[0_0_15px_rgba(255,196,0,0.4)] leading-none mb-2">
+            <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent my-6" />
+
+            {/* Price */}
+            <div className="mb-12">
+              <span className="text-white font-medium text-[14px] block mb-1">Tudo isso hoje por apenas:</span>
+              <div className="text-[64px] font-[900] text-brand-yellow leading-none mb-1">
                 R$ 29,99
               </div>
-              <span className="text-text-gray/50 text-[12px] uppercase font-bold tracking-widest block">ou 6x de R$ 5,63 no cartão</span>
+              <span className="text-white/60 text-[13px] font-bold">ou 6x de R$ 5,63 no cartão.</span>
             </div>
 
-            <PremiumButton>QUERO GARANTIR<br />MEU PACK + BÔNUS</PremiumButton>
+            {/* Overlapping Button */}
+            <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-full flex justify-center">
+              <PremiumButton>GARANTIR ACESSO AGORA</PremiumButton>
+            </div>
           </div>
         </div>
       </section>
