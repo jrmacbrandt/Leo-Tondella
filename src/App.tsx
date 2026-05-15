@@ -116,7 +116,7 @@ export default function App() {
               </div>
 
               <PremiumButton className="translate-y-[40px]">
-                GARANTIR MEU PACK
+                QUERO GARANTIR<br />MEU PACK + BÔNUS
               </PremiumButton>
             </div>
           </div>
@@ -271,7 +271,7 @@ export default function App() {
 
           <div className="flex justify-center">
             <PremiumButton>
-              GARANTIR MEU PACK
+              QUERO GARANTIR<br />MEU PACK + BÔNUS
             </PremiumButton>
           </div>
         </div>
@@ -332,7 +332,7 @@ export default function App() {
 
               <div className="flex justify-center lg:justify-start pt-4 md:pt-8 relative w-full">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-magenta/10 blur-[80px] -z-10" />
-                <PremiumButton>GARANTIR MEU PACK</PremiumButton>
+                <PremiumButton>QUERO GARANTIR<br />MEU PACK + BÔNUS</PremiumButton>
               </div>
             </div>
           </div>
@@ -441,7 +441,7 @@ export default function App() {
               <span className="text-text-gray/50 text-[12px] uppercase font-bold tracking-widest block">ou 6x de R$ 5,63 no cartão</span>
             </div>
 
-            <PremiumButton>GARANTIR ACESSO</PremiumButton>
+            <PremiumButton>QUERO GARANTIR<br />MEU PACK + BÔNUS</PremiumButton>
           </div>
         </div>
       </section>

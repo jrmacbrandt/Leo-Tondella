@@ -89,22 +89,24 @@ h1, h2, h3, h4, .font-heading {
 
 .btn-premium {
   position: relative;
-  background: linear-gradient(180deg, #D046FF, #6C24FF);
-  box-shadow: 0 12px 40px rgba(196, 0, 255, 0.45);
-  border-radius: 40px;
+  background: linear-gradient(180deg, #9D50FF 0%, #5218CC 100%);
+  box-shadow: 0 15px 45px rgba(82, 24, 204, 0.5);
+  border-radius: 60px;
   font-family: var(--font-heading);
   text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 800;
-  transition: all 0.35s ease;
+  font-size: 19px;
+  font-weight: 900;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(0);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   color: white;
-  width: 340px;
-  height: 68px;
+  width: 360px;
+  height: 76px;
+  line-height: 1.1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -119,8 +121,8 @@ h1, h2, h3, h4, .font-heading {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50%;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0));
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 50%);
   pointer-events: none;
 }
 
