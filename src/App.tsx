@@ -198,7 +198,7 @@ export default function App() {
       <section className="section-padding relative overflow-hidden section-gradient">
         <div className="container-custom text-center relative z-10">
           <h2 className="text-[22px] md:text-[48px] font-[900] mb-8 md:mb-14 uppercase leading-tight text-white px-4">
-            ADQUIRINDO O PACK GOSPEL HOJE<br />
+            ADQUIRINDO O <span className="text-brand-magenta">PACK GOSPEL</span> HOJE<br />
             VOCÊ LEVA TUDO ISSO DE BÔNUS
           </h2>
 
