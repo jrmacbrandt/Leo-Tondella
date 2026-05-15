@@ -262,7 +262,10 @@ export default function App() {
               <div><span className="text-brand-magenta">Videoaulas completas</span> para você mesmo não sabendo nada de design possa criar suas artes.</div>
               <div className="h-4 md:h-6" />
               <div>Mais de <span className="text-brand-magenta font-bold">R$ 200 EM BÔNUS DE PRESENTE</span>.</div>
-              <div className="text-brand-magenta mt-4"><span className="text-white">Só o conhecimento dessas aulas</span> vale muito mais do que o seu investimento hoje.</div>
+              <div className="mt-4">
+                <span className="text-white">Só o conhecimento dessas aulas</span>
+                <span className="text-brand-magenta"> vale muito mais do que o seu investimento hoje.</span>
+              </div>
             </div>
           </div>
 
