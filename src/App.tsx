@@ -81,13 +81,16 @@ export default function App() {
         <img
           src="/pack_mockup.png"
           alt="Hero Background"
-          className="absolute inset-0 w-full h-full object-fill z-0"
+          className="absolute inset-0 w-full h-full object-cover object-center lg:object-fill z-0"
         />
 
-        <div className="container-custom relative z-10 w-full">
+        <div className="container-custom relative z-10 w-full px-4 sm:px-6">
           <div className="flex flex-col lg:flex-row items-center">
             {/* Text Content */}
-            <div className="w-full lg:w-[60%] flex flex-col items-center lg:items-start text-center lg:text-left px-2 sm:px-0">
+            <div className="w-full lg:w-[60%] flex flex-col items-center lg:items-start text-center lg:text-left relative">
+              {/* Mobile Readability Overlay */}
+              <div className="lg:hidden absolute inset-0 -mx-4 bg-black/40 blur-[40px] -z-10 rounded-full" />
+              
               <h1 className="font-heading font-[900] text-[24px] lg:text-[39px] leading-[1.03] mb-4 drop-shadow-2xl w-full max-w-[580px] text-white">
                 Pare de criar artes do zero.<br />
                 <span className="text-brand-magenta">Artes Gospel 100% Editáveis<br />
@@ -157,13 +160,13 @@ export default function App() {
           </div>
 
           {/* Carousel Mobile Only */}
-          <div className="md:hidden mb-16 px-4 overflow-hidden">
+          <div className="md:hidden mb-16 px-0 overflow-hidden w-full">
             <div
               ref={carouselRef}
-              className="flex overflow-x-hidden snap-x snap-mandatory scrollbar-hide pb-4"
+              className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 w-full"
             >
               {[1, 2, 3, 4].map((i, index) => (
-                <div key={i} className="min-w-full snap-center px-2">
+                <div key={i} className="min-w-full snap-center px-4">
                   <div className="aspect-[3/4.5] overflow-hidden shadow-2xl rounded-2xl border border-white/5">
                     <img
                       src={`/showcase_${i}.png`}
@@ -228,10 +231,10 @@ export default function App() {
           </div>
 
           {/* Carousel Mobile Only */}
-          <div className="md:hidden mb-20 px-4 overflow-hidden">
+          <div className="md:hidden mb-20 px-0 overflow-hidden w-full">
             <div
               ref={bonusCarouselRef}
-              className="flex overflow-x-hidden snap-x snap-mandatory scrollbar-hide pb-4"
+              className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 w-full"
             >
               {[1, 2, 3, 4, 5].map((i, index) => (
                 <div key={i} className="min-w-full snap-center px-4">
@@ -280,19 +283,21 @@ export default function App() {
       <GlowingDivider />
 
       {/* Comparison Section */}
-      <section className="section-padding relative overflow-hidden">
+      <section className="py-[60px] md:py-[100px] lg:py-[120px] relative overflow-hidden">
         {/* Background Image */}
         <img
           src="/comparison_image.png"
           alt="Background"
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
+        {/* Overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-black/30 z-10 lg:hidden" />
 
-        <div className="container-custom relative z-20">
+        <div className="container-custom relative z-20 px-4 md:px-6">
           <div className="flex flex-col lg:flex-row gap-[40px] md:gap-[80px] lg:gap-[120px] items-start">
             {/* Left Column: Title (45%) */}
             <div className="w-full lg:w-[45%]">
-              <h2 className="text-[17px] md:text-[34px] font-[900] leading-[1.2] text-center lg:text-left break-words w-full text-white">
+              <h2 className="text-[18px] md:text-[34px] font-[900] leading-[1.2] text-center lg:text-left break-words w-full text-white drop-shadow-lg">
                 Por que esse Pack <br className="hidden md:block" />
                 <span className="text-gradient-primary">é a escolha mais inteligente</span><br className="hidden md:block" />
                 para sua igreja?
