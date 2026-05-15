@@ -280,26 +280,25 @@ export default function App() {
       <GlowingDivider />
 
       {/* Comparison Section */}
-      <section className="section-padding overflow-x-hidden section-gradient">
-        <div className="container-custom">
+      <section className="section-padding relative overflow-hidden">
+        {/* Background Image */}
+        <img
+          src="/comparison_image.png"
+          alt="Background"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        />
+        {/* Overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-black/70 z-10" />
+
+        <div className="container-custom relative z-20">
           <div className="flex flex-col lg:flex-row gap-[40px] md:gap-[80px] lg:gap-[120px] items-start">
-            {/* Left: Title & Smartphones Mockup (45%) */}
-            <div className="w-full lg:w-[45%] space-y-12">
+            {/* Left Column: Title (45%) */}
+            <div className="w-full lg:w-[45%]">
               <h2 className="text-[22px] md:text-[46px] font-[900] leading-[1.2] text-center lg:text-left break-words w-full text-white">
                 Por que esse Pack <br className="hidden md:block" />
                 <span className="text-gradient-primary">é a escolha mais inteligente</span><br className="hidden md:block" />
                 para sua igreja?
               </h2>
-              <div className="relative flex justify-center lg:justify-start px-4 md:px-0">
-                <div className="relative">
-                  <img
-                    src="/phones_mockup.png"
-                    alt="Phone Mockups"
-                    className="w-full max-w-[280px] md:max-w-[420px] drop-shadow-[0_0_100px_rgba(123,0,255,0.3)] hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-purple-deep/20 blur-[120px] -z-10" />
-                </div>
-              </div>
             </div>
 
             {/* Right: Text & Comparison (55%) */}
