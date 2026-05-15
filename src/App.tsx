@@ -340,42 +340,41 @@ export default function App() {
 
       {/* Testimonials Section */}
       <section className="section-padding section-gradient overflow-x-hidden">
-        <div className="container-custom">
-          <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-[24px] md:text-[42px] font-[900] uppercase leading-tight tracking-tighter text-white">
-              AINDA ESTÁ EM DÚVIDA? VEJA O QUE<br className="hidden md:block" />
-              OS MEMBROS FALAM DO PACK GOSPEL.
             </h2>
           </div>
 
-          {/* Testimonial Cards (3x3 grid) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-[28px] mb-16">
+          {/* Testimonial Cards */}
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8 max-w-[1250px] mx-auto px-4">
             {[
-              "A gente não tinha identidade nenhuma, agora tá tudo padronizado, bonito... outro nível!",
-              "O pastor até comentou hoje da arte kkk nem esperava isso.",
-              "Parabéns pelo pack, não sei mexer muito com design, mas consegui usar tranquilamente.",
-              "Usei uma arte rapidinho e já postei kkk ficou bom demais mano.",
-              "Essas artes mudaram totalmente a estética da nossa igreja. Agora tá tudo profissional.",
-              "Usei uma das artes hoje e já teve gente perguntando quem fez 😍 bom demais!",
-              "Quero agradecer demais por esse pack, valeu cada centavo!",
-              "Sou líder de mídia na igreja e isso aqui me salvou! Já vem praticamente pronto.",
-              "Eu sempre travava pra fazer arte, agora foi bem mais rápido."
+              "Fala Léo, só passando pra te agradecer por esse pack 🙏 a gente não tinha identidade nenhuma, agora tá tudo padronizado, bonito... outro nível!",
+              "mano, o pastor até comentou hoje da arte kkk nem esperava isso",
+              "Oi Leo. Parabéns pelo pack que você criou e quero agradecer pelas videoaulas, pois eu não sei mexer muito com design, mas consegui usar tranquilamente. Muito fácil mesmo!",
+              "Léo, peguei teu pack aqui... usei uma arte rapidinho e já postei kkk ficou bom demais mano",
+              "Mano, essas artes mudaram totalmente a estética da nossa igreja. Antes a gente postava qualquer coisa, agora tá tudo profissional. Já teve gente nova falando que conheceu o culto pelo Instagram 💪",
+              "Mano usei uma das artes hoje do pack gospel e já teve gente perguntando quem fez 😍 bom demais!",
+              "Boa tarde irmão. A paz! Quero agradecer d mais homem por esse pack, valeu cada centavo! Já estou ansioso para mais atualização rsrs... 🔥 ❤️",
+              "E ai Tondella. tudo bem? Sou líder de mídia na igreja e isso aqui me salvou! Eu não tenho muito tempo pra criar arte, e esse pack já vem praticamente pronto. Obrigado mesmo irmão pela qualidade e a praticidade só edito e posto. Recomendo demais!",
+              "amigo, isso aqui ajudou viu... eu sempre travava pra fazer arte, agora foi bem mais rápido",
+              "Léo, nem terminei de ver tudo ainda mas já gostei kkk tem bastante coisa boa",
+              "mano, não sou muito de comprar essas coisas mas esse aqui valeu viu"
             ].map((text, i) => (
-              <div key={i} className="w-full min-h-[130px]">
-                <div className="bg-[#ffffff] p-[22px] rounded-[14px] flex flex-col h-full shadow-2xl">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 bg-gray-200">
-                      <img src={`https://i.pravatar.cc/150?u=${i + 100}`} alt="User" />
-                    </div>
-                    <div>
-                      <h4 className="font-[900] text-[#000000] text-[16px]">Nome Sobrenome</h4>
-                      <div className="flex text-brand-yellow">
-                        {[1, 2, 3, 4, 5].map(s => <Star key={s} size={14} fill="currentColor" />)}
-                      </div>
+              <div key={i} className="bg-white rounded-[18px] p-6 flex flex-col shadow-xl hover:scale-[1.03] transition-all duration-300 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-2rem)] max-w-[380px]">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200 shrink-0">
+                    <img src={`https://i.pravatar.cc/150?u=${i + 50}`} alt="User" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-[#1A1A1A] font-bold text-[14px]">Membro Pack Gospel</span>
+                    <div className="flex gap-0.5 text-[#FFC107]">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} size={12} fill="currentColor" />
+                      ))}
                     </div>
                   </div>
-                  <p className="text-[#000000]/80 text-[15px] leading-snug flex-1 italic font-medium">"{text}"</p>
                 </div>
+                <p className="text-[#333333] font-medium text-[14px] md:text-[15px] leading-relaxed">
+                  {text}
+                </p>
               </div>
             ))}
           </div>
