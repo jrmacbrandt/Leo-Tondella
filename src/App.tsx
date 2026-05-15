@@ -287,8 +287,6 @@ export default function App() {
           alt="Background"
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
-        {/* Overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-black/70 z-10" />
 
         <div className="container-custom relative z-20">
           <div className="flex flex-col lg:flex-row gap-[40px] md:gap-[80px] lg:gap-[120px] items-start">
