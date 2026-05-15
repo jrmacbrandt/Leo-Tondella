@@ -98,21 +98,19 @@ export default function App() {
                 Edite no Celular ou PC, mesmo sem experiência.
               </p>
 
-              <div className="mb-10 w-full flex flex-col items-center lg:items-start">
-                <span className="strikethrough-magenta text-[16px] lg:text-[20px] font-bold mb-2">DE: R$ 89,99</span>
+              <div className="mb-10 w-full flex flex-col items-center lg:items-start -space-y-1">
+                <span className="strikethrough-magenta text-[16px] lg:text-[20px] font-bold">DE: R$ 89,99</span>
                 
                 {/* Unified Price Layout */}
-                <div className="flex flex-col items-center lg:items-start text-brand-yellow mb-2">
-                  <div className="flex flex-wrap items-baseline justify-center lg:justify-start gap-x-3 gap-y-2">
-                    <span className="font-heading font-[900] text-[20pt] uppercase text-brand-yellow leading-none">HOJE POR APENAS R$</span>
-                    <div className="flex items-start leading-none">
-                      <span className="font-heading font-[900] text-[72px] drop-shadow-[0_0_30px_rgba(255,193,0,0.5)]">29</span>
-                      <span className="font-heading font-[900] text-[32px] mt-1">,99</span>
-                    </div>
+                <div className="flex flex-wrap items-baseline justify-center lg:justify-start gap-x-2">
+                  <span className="font-heading font-[900] text-[20pt] uppercase text-brand-yellow leading-none">HOJE POR APENAS R$</span>
+                  <div className="flex items-start leading-none">
+                    <span className="font-heading font-[900] text-[72px] drop-shadow-[0_0_30px_rgba(255,193,0,0.5)]">29</span>
+                    <span className="font-heading font-[900] text-[32px] mt-1">,99</span>
                   </div>
                 </div>
 
-                <span className="text-[13px] sm:text-[14px] lg:text-[14px] text-white/70 font-medium italic mt-2">
+                <span className="text-[13px] sm:text-[14px] lg:text-[14px] text-white/70 font-medium italic !mt-0">
                   Acesso vitalício. (Oferta por tempo limitado)
                 </span>
               </div>
