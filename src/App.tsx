@@ -115,7 +115,7 @@ export default function App() {
                 </span>
               </div>
 
-              <PremiumButton>
+              <PremiumButton className="translate-y-[100px]">
                 GARANTIR MEU PACK
               </PremiumButton>
             </div>
