@@ -465,7 +465,7 @@ export default function App() {
       <section className="section-padding overflow-x-hidden section-gradient">
         <div className="container-custom">
           <div className="text-center mb-10 md:mb-14 px-4">
-            <span className="text-white font-[900] text-[12px] uppercase tracking-[0.5em] opacity-80">
+            <span className="text-white font-[900] text-[15px] uppercase tracking-[0.5em] opacity-80">
               CRIADO POR QUEM ENTENDE DE DESIGN PARA O REINO
             </span>
           </div>
