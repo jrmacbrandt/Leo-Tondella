@@ -376,23 +376,6 @@ export default function App() {
             ))}
           </div>
 
-          {/* Video Testimonials */}
-          <div className="flex flex-wrap justify-center gap-6 mt-16 max-w-4xl mx-auto">
-            {[1, 2].map((v) => (
-              <div key={v} className="w-[240px] h-[120px] bg-bg-dark rounded-2xl border-[2px] border-white/5 relative overflow-hidden group cursor-pointer shadow-2xl shrink-0">
-                <img
-                  src={`https://placehold.co/480x240/050505/white?text=DEPOIMENTO+VIDEO+${v}`}
-                  className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700"
-                  alt="Video Depoimento"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <div className="w-0 h-0 border-y-[8px] border-y-transparent border-l-[14px] border-l-white translate-x-[2px]" />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
