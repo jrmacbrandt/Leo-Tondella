@@ -11,6 +11,8 @@
   --color-brand-blue: #4776FF;
   --color-brand-yellow: #FFC300;
   --color-text-gray: #BDBDBD;
+  --section-py: 70px;
+  --section-py-mobile: 40px;
 }
 
 body {
@@ -49,6 +51,18 @@ h1, h2, h3, h4, .font-heading {
 
 .section-gradient {
   background: linear-gradient(180deg, #000000 0%, #12001f 40%, #000000 100%);
+}
+
+.section-padding {
+  padding-top: var(--section-py-mobile);
+  padding-bottom: var(--section-py-mobile);
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: var(--section-py);
+    padding-bottom: var(--section-py);
+  }
 }
 
 .glow-purple {

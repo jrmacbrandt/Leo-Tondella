@@ -15,7 +15,7 @@ const PremiumButton = ({ children, className = "" }: { children: React.ReactNode
 );
 
 const GlowingDivider = () => (
-  <div className="glowing-divider my-16" />
+  <div className="glowing-divider my-2 md:my-4" />
 );
 
 // --- Main Application ---
@@ -63,7 +63,7 @@ export default function App() {
     <div className="min-h-screen bg-bg-dark text-white font-sans selection:bg-brand-purple-deep/30 overflow-x-hidden">
 
       {/* Hero Section */}
-      <section className="relative min-h-[850px] flex items-center pt-[120px] pb-[100px] overflow-hidden">
+      <section className="relative min-h-[700px] flex items-center pt-[100px] pb-[70px] overflow-hidden">
         {/* Logo over background */}
         <div className="absolute top-8 left-0 right-0 z-20 flex justify-center pointer-events-none">
           <div className="flex items-center gap-2">
@@ -130,7 +130,7 @@ export default function App() {
 
 
       {/* Showcase Section */}
-      <section className="py-[120px] section-gradient">
+      <section className="section-padding section-gradient">
         <div className="container-custom">
           <div className="text-center mb-[60px]">
             <h2 className="font-heading font-[900] text-[42px] uppercase mb-4 tracking-tight leading-none text-white">
@@ -195,7 +195,7 @@ export default function App() {
       </section>
 
       {/* Bonus Section */}
-      <section className="pt-[140px] pb-[120px] relative overflow-hidden section-gradient">
+      <section className="section-padding relative overflow-hidden section-gradient">
         <div className="container-custom text-center relative z-10">
           <h2 className="text-[22px] md:text-[48px] font-[900] mb-8 md:mb-14 uppercase leading-tight text-white px-4">
             ADQUIRINDO O PACK GOSPEL HOJE<br />
@@ -257,7 +257,7 @@ export default function App() {
             </div>
           </div>
 
-          <div className="max-w-[700px] mx-auto mb-24 px-4 flex flex-col items-center text-center">
+          <div className="max-w-[700px] mx-auto mb-16 md:mb-20 px-4 flex flex-col items-center text-center">
             <div className="text-[16px] md:text-[20px] font-medium text-white leading-[1.6]">
               <div><span className="text-brand-magenta">Videoaulas completas</span> para você mesmo não sabendo nada de design possa criar suas artes.</div>
               <div className="h-4 md:h-6" />
@@ -277,7 +277,7 @@ export default function App() {
       <GlowingDivider />
 
       {/* Comparison Section */}
-      <section className="py-[120px] overflow-x-hidden section-gradient">
+      <section className="section-padding overflow-x-hidden section-gradient">
         <div className="container-custom">
           <div className="flex flex-col lg:flex-row gap-[40px] md:gap-[80px] lg:gap-[120px] items-center">
             {/* Left: Smartphones Mockup (45%) */}
@@ -337,7 +337,7 @@ export default function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-[120px] section-gradient overflow-x-hidden">
+      <section className="section-padding section-gradient overflow-x-hidden">
         <div className="container-custom">
           <div className="text-center mb-10 md:mb-16">
             <h2 className="text-[24px] md:text-[42px] font-[900] uppercase leading-tight tracking-tighter text-white">
@@ -399,7 +399,7 @@ export default function App() {
       </section>
 
       {/* Offer Section */}
-      <section className="py-[120px] relative overflow-hidden section-gradient">
+      <section className="section-padding relative overflow-hidden section-gradient">
         <div className="container-custom text-center">
           <h2 className="text-[22px] md:text-[42px] font-[900] uppercase mb-8 md:mb-14 leading-tight tracking-tighter px-4 text-white">
             CHEGA DE SÓ OLHAR. <span className="text-gradient-primary">COMECE AGORA</span><br />
@@ -444,7 +444,7 @@ export default function App() {
       </section>
 
       {/* Guarantee Section */}
-      <section className="relative py-[120px] overflow-hidden" style={{ background: 'linear-gradient(90deg,#1f0040,#0059ff,#5f007a)' }}>
+      <section className="relative section-padding overflow-hidden" style={{ background: 'linear-gradient(90deg,#1f0040,#0059ff,#5f007a)' }}>
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-16">
             <div className="shrink-0 flex items-center justify-center">
@@ -468,9 +468,9 @@ export default function App() {
       </section>
 
       {/* Creator Section */}
-      <section className="py-[120px] overflow-x-hidden section-gradient">
+      <section className="section-padding overflow-x-hidden section-gradient">
         <div className="container-custom">
-          <div className="text-center mb-[80px] px-4">
+          <div className="text-center mb-10 md:mb-14 px-4">
             <span className="text-white font-[900] text-[12px] uppercase tracking-[0.5em] opacity-80">
               CRIADO POR QUEM ENTENDE DE DESIGN PARA O REINO
             </span>
