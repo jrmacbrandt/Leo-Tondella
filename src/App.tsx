@@ -410,7 +410,9 @@ export default function App() {
                 "Garantia incondicional de 7 dias"
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-4">
-                  <div className="bg-brand-magenta rounded-full p-1 shrink-0"><Check size={14} strokeWidth={4} className="text-white" /></div>
+                  <div className="bg-gradient-to-br from-[#E500FF] via-[#7B00FF] to-[#4776FF] rounded-full p-1 shrink-0">
+                    <Check size={14} strokeWidth={4} className="text-white" />
+                  </div>
                   <span className="leading-tight">{item}</span>
                 </li>
               ))}
