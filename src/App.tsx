@@ -203,7 +203,7 @@ export default function App() {
           </h2>
 
           {/* Grid Desktop */}
-          <div className="hidden md:flex justify-center gap-[20px] mb-20">
+          <div className="hidden md:flex justify-center gap-[18px] mb-20">
             {[
               { text: "CURSO PC: PASSO A PASSO", color: "#405CFF" },
               { text: "CURSO MOBILE: PASSO A PASSO", color: "#405CFF" },
@@ -211,16 +211,17 @@ export default function App() {
               { text: "MEU PROCESSO CRIATIVO", color: "#405CFF" },
               { text: "CENTRAL DE DOWNLOADS", color: "#FF00D4", icon: true },
             ].map((bonus, i) => (
-              <div key={i} className="w-[215px] aspect-video shrink-0">
+              <div key={i} className="w-[195px] h-[290px] shrink-0">
                 <div
-                  className="w-full h-full rounded-2xl overflow-hidden border border-white/10 relative group"
-                  style={{ boxShadow: `0 0 20px ${bonus.color}20` }}
+                  className="w-full h-full rounded-[2rem] overflow-hidden border border-white/10 relative group"
+                  style={{ boxShadow: `0 0 20px ${bonus.color}30` }}
                 >
                   <img
                     src={`/bonus_${i + 1}.png`}
                     alt={bonus.text}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90" />
                 </div>
               </div>
             ))}
@@ -234,12 +235,13 @@ export default function App() {
             >
               {[1, 2, 3, 4, 5].map((i, index) => (
                 <div key={i} className="min-w-full snap-center px-4">
-                  <div className="aspect-video rounded-2xl overflow-hidden border border-white/10 relative shadow-2xl">
+                  <div className="aspect-[9/16] rounded-[2.5rem] overflow-hidden border border-white/10 relative shadow-2xl">
                     <img
                       src={`/bonus_${i}.png`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover opacity-90"
                       alt={`Bônus ${i}`}
                     />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80" />
                   </div>
                 </div>
               ))}
