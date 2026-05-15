@@ -98,15 +98,15 @@ export default function App() {
                 Edite no Celular ou PC, mesmo sem experiência.
               </p>
 
-              <div className="mb-10 w-full flex flex-col items-center lg:items-start gap-1">
+              <div className="mb-10 w-full flex flex-col items-center lg:items-start gap-3">
                 <span className="strikethrough-magenta text-[16px] lg:text-[20px] font-bold leading-none">DE: R$ 89,99</span>
                 
                 {/* Unified Price Layout */}
-                <div className="flex flex-wrap items-baseline justify-center lg:justify-start gap-x-2 leading-none">
+                <div className="flex flex-wrap items-baseline justify-center lg:justify-start gap-x-2 leading-[0.7]">
                   <span className="font-heading font-[900] text-[20pt] uppercase text-brand-yellow leading-none">HOJE POR APENAS R$</span>
-                  <div className="flex items-start leading-none">
-                    <span className="font-heading font-[900] text-[72px] drop-shadow-[0_0_30px_rgba(255,193,0,0.5)]">29</span>
-                    <span className="font-heading font-[900] text-[32px] mt-1">,99</span>
+                  <div className="flex items-start leading-[0.7]">
+                    <span className="font-heading font-[900] text-[72px] drop-shadow-[0_0_30px_rgba(255,193,0,0.5)] leading-[0.7]">29</span>
+                    <span className="font-heading font-[900] text-[32px] mt-1 leading-none">,99</span>
                   </div>
                 </div>
 
