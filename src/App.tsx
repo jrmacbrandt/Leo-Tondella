@@ -390,7 +390,7 @@ export default function App() {
           <div className="mx-auto offer-card-border p-[40px] flex flex-col w-full md:w-[380px] min-h-[660px] items-center text-center relative mb-20">
             {/* Header */}
             <div className="mb-6">
-              <span className="text-brand-magenta font-black uppercase text-[12px] tracking-[0.3em] block mb-1">TSTUDIO</span>
+              <span className="text-gradient-primary font-[1000] uppercase text-[16px] tracking-[0.05em] block mb-1">TSTUDIO</span>
               <h3 className="text-white text-[48px] font-[900] leading-[0.9] uppercase tracking-tighter">
                 Pack<br />Gospel
               </h3>
