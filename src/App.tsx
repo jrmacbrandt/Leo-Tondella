@@ -358,21 +358,13 @@ export default function App() {
               "Léo, nem terminei de ver tudo ainda mas já gostei kkk tem bastante coisa boa",
               "mano, não sou muito de comprar essas coisas mas esse aqui valeu viu"
             ].map((text, i) => (
-              <div key={i} className="bg-white rounded-[18px] p-6 flex flex-col shadow-xl hover:scale-[1.03] transition-all duration-300 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-2rem)] max-w-[380px]">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200 shrink-0">
-                    <img src={`https://i.pravatar.cc/150?u=${i + 50}`} alt="User" className="w-full h-full object-cover" />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-[#1A1A1A] font-bold text-[14px]">Membro Pack Gospel</span>
-                    <div className="flex gap-0.5 text-[#FFC107]">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} size={12} fill="currentColor" />
-                      ))}
-                    </div>
+              <div key={i} className="bg-white rounded-[14px] p-5 flex flex-col shadow-lg hover:scale-[1.02] transition-all duration-300 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-2rem)] max-w-[360px]">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-full overflow-hidden bg-gray-100 shrink-0">
+                    <img src={`https://i.pravatar.cc/100?u=${i + 60}`} alt="User" className="w-full h-full object-cover" />
                   </div>
                 </div>
-                <p className="text-[#333333] font-medium text-[14px] md:text-[15px] leading-relaxed">
+                <p className="text-[#1A1A1A] font-medium text-[14px] leading-snug">
                   {text}
                 </p>
               </div>
