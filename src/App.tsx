@@ -340,6 +340,11 @@ export default function App() {
 
       {/* Testimonials Section */}
       <section className="section-padding section-gradient overflow-x-hidden">
+        <div className="container-custom">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-[24px] md:text-[42px] font-[900] uppercase leading-tight tracking-tighter text-white">
+              AINDA ESTÁ EM DÚVIDA? OLHA SÓ O QUE<br className="hidden md:block" />
+              OS MEMBROS FALAM DO PACK GOSPEL.
             </h2>
           </div>
 
