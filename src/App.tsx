@@ -63,7 +63,7 @@ export default function App() {
     <div className="min-h-screen bg-bg-dark text-white font-sans selection:bg-brand-purple-deep/30 overflow-x-hidden">
 
       {/* Hero Section */}
-      <section className="relative min-h-[700px] flex items-center pt-[100px] pb-[70px] overflow-hidden">
+      <section className="relative min-h-[850px] flex items-center pt-[120px] pb-[100px] overflow-hidden">
         {/* Logo over background */}
         <div className="absolute top-8 left-0 right-0 z-20 flex justify-center pointer-events-none">
           <div className="flex items-center gap-2">
