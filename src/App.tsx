@@ -203,7 +203,7 @@ export default function App() {
           </h2>
 
           {/* Grid Desktop */}
-          <div className="hidden md:flex justify-center gap-[22px] mb-20 flex-wrap">
+          <div className="hidden md:flex justify-center gap-[18px] mb-20">
             {[
               { text: "CURSO PC: PASSO A PASSO", color: "#405CFF" },
               { text: "CURSO MOBILE: PASSO A PASSO", color: "#405CFF" },
@@ -211,7 +211,7 @@ export default function App() {
               { text: "MEU PROCESSO CRIATIVO", color: "#405CFF" },
               { text: "CENTRAL DE DOWNLOADS", color: "#FF00D4", icon: true },
             ].map((bonus, i) => (
-              <div key={i} className="w-[210px] h-[310px] shrink-0">
+              <div key={i} className="w-[195px] h-[290px] shrink-0">
                 <div
                   className="w-full h-full rounded-[2rem] overflow-hidden border border-white/10 relative group"
                   style={{ boxShadow: `0 0 20px ${bonus.color}30` }}
