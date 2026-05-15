@@ -139,11 +139,21 @@ h1, h2, h3, h4, .font-heading {
 .offer-card-border {
   position: relative;
   border-radius: 4rem;
-  background: linear-gradient(#000000, #000000) padding-box,
-              linear-gradient(180deg, #E500FF, #4776FF) border-box;
-  border: 2px solid transparent;
+  background: #000000;
   z-index: 1;
   box-shadow: 0 0 50px rgba(138, 45, 255, 0.15);
+}
+
+.offer-card-border::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(180deg, #E500FF, #4776FF);
+  border-radius: 4rem;
+  z-index: -1;
 }
 
 .jagged-seal {
